@@ -1197,23 +1197,16 @@ namespace WebService
 			}
 		}
 	}
-	
+    [Serializable]
 	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.Item")]
 	public partial class Item : INotifyPropertyChanging, INotifyPropertyChanged
 	{
-		
 		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
-		
 		private System.Guid _IdItem;
-		
 		private System.Data.Linq.Binary _ImageItem;
-		
 		private System.Nullable<System.Guid> _IdLocation;
-		
 		private EntitySet<Item_Category> _Item_Categories;
-		
 		private EntitySet<Item_Lang> _Item_Langs;
-		
 		private EntityRef<Location> _Location;
 		
     #region Extensibility Method Definitions
@@ -1227,14 +1220,14 @@ namespace WebService
     partial void OnIdLocationChanging(System.Nullable<System.Guid> value);
     partial void OnIdLocationChanged();
     #endregion
-		
-		public Item()
-		{
-			this._Item_Categories = new EntitySet<Item_Category>(new Action<Item_Category>(this.attach_Item_Categories), new Action<Item_Category>(this.detach_Item_Categories));
-			this._Item_Langs = new EntitySet<Item_Lang>(new Action<Item_Lang>(this.attach_Item_Langs), new Action<Item_Lang>(this.detach_Item_Langs));
-			this._Location = default(EntityRef<Location>);
-			OnCreated();
-		}
+
+    public Item()
+    {
+        this._Item_Categories = new EntitySet<Item_Category>(new Action<Item_Category>(this.attach_Item_Categories), new Action<Item_Category>(this.detach_Item_Categories));
+        this._Item_Langs = new EntitySet<Item_Lang>(new Action<Item_Lang>(this.attach_Item_Langs), new Action<Item_Lang>(this.detach_Item_Langs));
+        this._Location = default(EntityRef<Location>);
+        OnCreated();
+    }
 		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_IdItem", DbType="UniqueIdentifier NOT NULL", IsPrimaryKey=true)]
 		public System.Guid IdItem
@@ -2495,15 +2488,17 @@ namespace WebService
     partial void OnIdCityChanging(System.Nullable<System.Guid> value);
     partial void OnIdCityChanged();
     #endregion
-		
+
+    //public Place()
+    //{
+    //    this._Place_Langs = new EntitySet<Place_Lang>(new Action<Place_Lang>(this.attach_Place_Langs), new Action<Place_Lang>(this.detach_Place_Langs));
+    //    this._Stores = new EntitySet<Store>(new Action<Store>(this.attach_Stores), new Action<Store>(this.detach_Stores));
+    //    this._City = default(EntityRef<City>);
+    //    OnCreated();
+    //}
 		public Place()
 		{
-			this._Place_Langs = new EntitySet<Place_Lang>(new Action<Place_Lang>(this.attach_Place_Langs), new Action<Place_Lang>(this.detach_Place_Langs));
-			this._Stores = new EntitySet<Store>(new Action<Store>(this.attach_Stores), new Action<Store>(this.detach_Stores));
-			this._City = default(EntityRef<City>);
-			OnCreated();
-		}
-		
+        }
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_IdPlace", DbType="UniqueIdentifier NOT NULL", IsPrimaryKey=true)]
 		public System.Guid IdPlace
 		{

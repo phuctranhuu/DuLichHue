@@ -226,6 +226,482 @@
           </s:sequence>
         </s:complexType>
       </s:element>
+      <s:element name="insertPlace">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="image" type="s:base64Binary" />
+            <s:element minOccurs="1" maxOccurs="1" name="idCity" type="s1:guid" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="insertPlaceResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="insertPlaceResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="updatePlace">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="idPlace" type="s1:guid" />
+            <s:element minOccurs="0" maxOccurs="1" name="image" type="s:base64Binary" />
+            <s:element minOccurs="1" maxOccurs="1" name="idCity" type="s1:guid" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="updatePlaceResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="updatePlaceResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="deletePlace">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="idPlace" type="s1:guid" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="deletePlaceResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="deletePlaceResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="insertPlaceLang">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="idPlace" type="s1:guid" />
+            <s:element minOccurs="1" maxOccurs="1" name="idLang" type="s1:guid" />
+            <s:element minOccurs="0" maxOccurs="1" name="namePlace" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="address" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="information" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="insertPlaceLangResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="insertPlaceLangResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="deletePlaceLang">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="idPlace" type="s1:guid" />
+            <s:element minOccurs="1" maxOccurs="1" name="idLang" type="s1:guid" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="deletePlaceLangResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="deletePlaceLangResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="updatePlaceLang">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="idPlace" type="s1:guid" />
+            <s:element minOccurs="1" maxOccurs="1" name="idLang" type="s1:guid" />
+            <s:element minOccurs="0" maxOccurs="1" name="namePlace" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="address" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="information" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="updatePlaceLangResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="updatePlaceLangResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="insertStore">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="idPlace" type="s1:guid" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="insertStoreResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="insertStoreResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="updateStore">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="idStore" type="s1:guid" />
+            <s:element minOccurs="1" maxOccurs="1" name="idPlace" type="s1:guid" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="updateStoreResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="updateStoreResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="deleteStore">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="idStore" type="s1:guid" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="deleteStoreResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="deleteStoreResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="insertStoreLang">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="idStore" type="s1:guid" />
+            <s:element minOccurs="1" maxOccurs="1" name="idLang" type="s1:guid" />
+            <s:element minOccurs="0" maxOccurs="1" name="nameStore" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="insertStoreLangResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="insertStoreLangResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="deleteStoreLang">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="idStore" type="s1:guid" />
+            <s:element minOccurs="1" maxOccurs="1" name="idLang" type="s1:guid" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="deleteStoreLangResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="deleteStoreLangResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="updateStoreLang">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="idStore" type="s1:guid" />
+            <s:element minOccurs="1" maxOccurs="1" name="idLang" type="s1:guid" />
+            <s:element minOccurs="0" maxOccurs="1" name="nameStore" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="updateStoreLangResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="updateStoreLangResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="insertLocation">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="idStore" type="s1:guid" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="insertLocationResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="insertLocationResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="updateLocation">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="idLocation" type="s1:guid" />
+            <s:element minOccurs="1" maxOccurs="1" name="idStore" type="s1:guid" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="updateLocationResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="updateLocationResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="deleteLocation">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="idLocation" type="s1:guid" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="deleteLocationResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="deleteLocationResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="insertLocationLang">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="idLocation" type="s1:guid" />
+            <s:element minOccurs="1" maxOccurs="1" name="idLang" type="s1:guid" />
+            <s:element minOccurs="0" maxOccurs="1" name="nameLocation" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="insertLocationLangResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="insertLocationLangResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="deleteLocationLang">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="idLocation" type="s1:guid" />
+            <s:element minOccurs="1" maxOccurs="1" name="idLang" type="s1:guid" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="deleteLocationLangResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="deleteLocationLangResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="updateLocationLang">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="idLocation" type="s1:guid" />
+            <s:element minOccurs="1" maxOccurs="1" name="idLang" type="s1:guid" />
+            <s:element minOccurs="0" maxOccurs="1" name="nameLocation" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="updateLocationLangResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="updateLocationLangResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="insertCategory">
+        <s:complexType />
+      </s:element>
+      <s:element name="insertCategoryResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="insertCategoryResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="deleteCategory">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="idCategory" type="s1:guid" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="deleteCategoryResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="deleteCategoryResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="insertCategoryLang">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="idCategory" type="s1:guid" />
+            <s:element minOccurs="1" maxOccurs="1" name="idLang" type="s1:guid" />
+            <s:element minOccurs="0" maxOccurs="1" name="nameCategory" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="insertCategoryLangResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="insertCategoryLangResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="deleteCategoryLang">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="idCategory" type="s1:guid" />
+            <s:element minOccurs="1" maxOccurs="1" name="idLang" type="s1:guid" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="deleteCategoryLangResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="deleteCategoryLangResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="updateCategoryLang">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="idCategory" type="s1:guid" />
+            <s:element minOccurs="1" maxOccurs="1" name="idLang" type="s1:guid" />
+            <s:element minOccurs="0" maxOccurs="1" name="nameCategory" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="updateCategoryLangResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="updateCategoryLangResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="insertItemCategory">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="idItem" type="s1:guid" />
+            <s:element minOccurs="1" maxOccurs="1" name="idCategory" type="s1:guid" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="insertItemCategoryResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="insertItemCategoryResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="deleteItemCategory">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="idItem" type="s1:guid" />
+            <s:element minOccurs="1" maxOccurs="1" name="idCategory" type="s1:guid" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="deleteItemCategoryResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="deleteItemCategoryResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="insertItem">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="idItem" type="s1:guid" />
+            <s:element minOccurs="0" maxOccurs="1" name="imageItem" type="s:base64Binary" />
+            <s:element minOccurs="1" maxOccurs="1" name="idLocation" type="s1:guid" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="insertItemResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="insertItemResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="updateItem">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="idItem" type="s1:guid" />
+            <s:element minOccurs="0" maxOccurs="1" name="imageItem" type="s:base64Binary" />
+            <s:element minOccurs="1" maxOccurs="1" name="idLocation" type="s1:guid" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="updateItemResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="updateItemResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="deleteItem">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="idItem" type="s1:guid" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="deleteItemResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="deleteItemResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="insertItemLang">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="idItem" type="s1:guid" />
+            <s:element minOccurs="1" maxOccurs="1" name="idLang" type="s1:guid" />
+            <s:element minOccurs="0" maxOccurs="1" name="nameItem" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="information" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="audio" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="video" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="insertItemLangResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="insertItemLangResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="updateItemLang">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="idItem" type="s1:guid" />
+            <s:element minOccurs="1" maxOccurs="1" name="idLang" type="s1:guid" />
+            <s:element minOccurs="0" maxOccurs="1" name="nameItem" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="information" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="audio" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="video" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="updateItemLangResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="updateItemLangResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="deleteItemLang">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="idItem" type="s1:guid" />
+            <s:element minOccurs="1" maxOccurs="1" name="idLang" type="s1:guid" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="deleteItemLangResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="deleteItemLangResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
     </s:schema>
     <s:schema elementFormDefault="qualified" targetNamespace="http://microsoft.com/wsdl/types/">
       <s:simpleType name="guid">
@@ -319,6 +795,192 @@
   <wsdl:message name="updateCityLangSoapOut">
     <wsdl:part name="parameters" element="tns:updateCityLangResponse" />
   </wsdl:message>
+  <wsdl:message name="insertPlaceSoapIn">
+    <wsdl:part name="parameters" element="tns:insertPlace" />
+  </wsdl:message>
+  <wsdl:message name="insertPlaceSoapOut">
+    <wsdl:part name="parameters" element="tns:insertPlaceResponse" />
+  </wsdl:message>
+  <wsdl:message name="updatePlaceSoapIn">
+    <wsdl:part name="parameters" element="tns:updatePlace" />
+  </wsdl:message>
+  <wsdl:message name="updatePlaceSoapOut">
+    <wsdl:part name="parameters" element="tns:updatePlaceResponse" />
+  </wsdl:message>
+  <wsdl:message name="deletePlaceSoapIn">
+    <wsdl:part name="parameters" element="tns:deletePlace" />
+  </wsdl:message>
+  <wsdl:message name="deletePlaceSoapOut">
+    <wsdl:part name="parameters" element="tns:deletePlaceResponse" />
+  </wsdl:message>
+  <wsdl:message name="insertPlaceLangSoapIn">
+    <wsdl:part name="parameters" element="tns:insertPlaceLang" />
+  </wsdl:message>
+  <wsdl:message name="insertPlaceLangSoapOut">
+    <wsdl:part name="parameters" element="tns:insertPlaceLangResponse" />
+  </wsdl:message>
+  <wsdl:message name="deletePlaceLangSoapIn">
+    <wsdl:part name="parameters" element="tns:deletePlaceLang" />
+  </wsdl:message>
+  <wsdl:message name="deletePlaceLangSoapOut">
+    <wsdl:part name="parameters" element="tns:deletePlaceLangResponse" />
+  </wsdl:message>
+  <wsdl:message name="updatePlaceLangSoapIn">
+    <wsdl:part name="parameters" element="tns:updatePlaceLang" />
+  </wsdl:message>
+  <wsdl:message name="updatePlaceLangSoapOut">
+    <wsdl:part name="parameters" element="tns:updatePlaceLangResponse" />
+  </wsdl:message>
+  <wsdl:message name="insertStoreSoapIn">
+    <wsdl:part name="parameters" element="tns:insertStore" />
+  </wsdl:message>
+  <wsdl:message name="insertStoreSoapOut">
+    <wsdl:part name="parameters" element="tns:insertStoreResponse" />
+  </wsdl:message>
+  <wsdl:message name="updateStoreSoapIn">
+    <wsdl:part name="parameters" element="tns:updateStore" />
+  </wsdl:message>
+  <wsdl:message name="updateStoreSoapOut">
+    <wsdl:part name="parameters" element="tns:updateStoreResponse" />
+  </wsdl:message>
+  <wsdl:message name="deleteStoreSoapIn">
+    <wsdl:part name="parameters" element="tns:deleteStore" />
+  </wsdl:message>
+  <wsdl:message name="deleteStoreSoapOut">
+    <wsdl:part name="parameters" element="tns:deleteStoreResponse" />
+  </wsdl:message>
+  <wsdl:message name="insertStoreLangSoapIn">
+    <wsdl:part name="parameters" element="tns:insertStoreLang" />
+  </wsdl:message>
+  <wsdl:message name="insertStoreLangSoapOut">
+    <wsdl:part name="parameters" element="tns:insertStoreLangResponse" />
+  </wsdl:message>
+  <wsdl:message name="deleteStoreLangSoapIn">
+    <wsdl:part name="parameters" element="tns:deleteStoreLang" />
+  </wsdl:message>
+  <wsdl:message name="deleteStoreLangSoapOut">
+    <wsdl:part name="parameters" element="tns:deleteStoreLangResponse" />
+  </wsdl:message>
+  <wsdl:message name="updateStoreLangSoapIn">
+    <wsdl:part name="parameters" element="tns:updateStoreLang" />
+  </wsdl:message>
+  <wsdl:message name="updateStoreLangSoapOut">
+    <wsdl:part name="parameters" element="tns:updateStoreLangResponse" />
+  </wsdl:message>
+  <wsdl:message name="insertLocationSoapIn">
+    <wsdl:part name="parameters" element="tns:insertLocation" />
+  </wsdl:message>
+  <wsdl:message name="insertLocationSoapOut">
+    <wsdl:part name="parameters" element="tns:insertLocationResponse" />
+  </wsdl:message>
+  <wsdl:message name="updateLocationSoapIn">
+    <wsdl:part name="parameters" element="tns:updateLocation" />
+  </wsdl:message>
+  <wsdl:message name="updateLocationSoapOut">
+    <wsdl:part name="parameters" element="tns:updateLocationResponse" />
+  </wsdl:message>
+  <wsdl:message name="deleteLocationSoapIn">
+    <wsdl:part name="parameters" element="tns:deleteLocation" />
+  </wsdl:message>
+  <wsdl:message name="deleteLocationSoapOut">
+    <wsdl:part name="parameters" element="tns:deleteLocationResponse" />
+  </wsdl:message>
+  <wsdl:message name="insertLocationLangSoapIn">
+    <wsdl:part name="parameters" element="tns:insertLocationLang" />
+  </wsdl:message>
+  <wsdl:message name="insertLocationLangSoapOut">
+    <wsdl:part name="parameters" element="tns:insertLocationLangResponse" />
+  </wsdl:message>
+  <wsdl:message name="deleteLocationLangSoapIn">
+    <wsdl:part name="parameters" element="tns:deleteLocationLang" />
+  </wsdl:message>
+  <wsdl:message name="deleteLocationLangSoapOut">
+    <wsdl:part name="parameters" element="tns:deleteLocationLangResponse" />
+  </wsdl:message>
+  <wsdl:message name="updateLocationLangSoapIn">
+    <wsdl:part name="parameters" element="tns:updateLocationLang" />
+  </wsdl:message>
+  <wsdl:message name="updateLocationLangSoapOut">
+    <wsdl:part name="parameters" element="tns:updateLocationLangResponse" />
+  </wsdl:message>
+  <wsdl:message name="insertCategorySoapIn">
+    <wsdl:part name="parameters" element="tns:insertCategory" />
+  </wsdl:message>
+  <wsdl:message name="insertCategorySoapOut">
+    <wsdl:part name="parameters" element="tns:insertCategoryResponse" />
+  </wsdl:message>
+  <wsdl:message name="deleteCategorySoapIn">
+    <wsdl:part name="parameters" element="tns:deleteCategory" />
+  </wsdl:message>
+  <wsdl:message name="deleteCategorySoapOut">
+    <wsdl:part name="parameters" element="tns:deleteCategoryResponse" />
+  </wsdl:message>
+  <wsdl:message name="insertCategoryLangSoapIn">
+    <wsdl:part name="parameters" element="tns:insertCategoryLang" />
+  </wsdl:message>
+  <wsdl:message name="insertCategoryLangSoapOut">
+    <wsdl:part name="parameters" element="tns:insertCategoryLangResponse" />
+  </wsdl:message>
+  <wsdl:message name="deleteCategoryLangSoapIn">
+    <wsdl:part name="parameters" element="tns:deleteCategoryLang" />
+  </wsdl:message>
+  <wsdl:message name="deleteCategoryLangSoapOut">
+    <wsdl:part name="parameters" element="tns:deleteCategoryLangResponse" />
+  </wsdl:message>
+  <wsdl:message name="updateCategoryLangSoapIn">
+    <wsdl:part name="parameters" element="tns:updateCategoryLang" />
+  </wsdl:message>
+  <wsdl:message name="updateCategoryLangSoapOut">
+    <wsdl:part name="parameters" element="tns:updateCategoryLangResponse" />
+  </wsdl:message>
+  <wsdl:message name="insertItemCategorySoapIn">
+    <wsdl:part name="parameters" element="tns:insertItemCategory" />
+  </wsdl:message>
+  <wsdl:message name="insertItemCategorySoapOut">
+    <wsdl:part name="parameters" element="tns:insertItemCategoryResponse" />
+  </wsdl:message>
+  <wsdl:message name="deleteItemCategorySoapIn">
+    <wsdl:part name="parameters" element="tns:deleteItemCategory" />
+  </wsdl:message>
+  <wsdl:message name="deleteItemCategorySoapOut">
+    <wsdl:part name="parameters" element="tns:deleteItemCategoryResponse" />
+  </wsdl:message>
+  <wsdl:message name="insertItemSoapIn">
+    <wsdl:part name="parameters" element="tns:insertItem" />
+  </wsdl:message>
+  <wsdl:message name="insertItemSoapOut">
+    <wsdl:part name="parameters" element="tns:insertItemResponse" />
+  </wsdl:message>
+  <wsdl:message name="updateItemSoapIn">
+    <wsdl:part name="parameters" element="tns:updateItem" />
+  </wsdl:message>
+  <wsdl:message name="updateItemSoapOut">
+    <wsdl:part name="parameters" element="tns:updateItemResponse" />
+  </wsdl:message>
+  <wsdl:message name="deleteItemSoapIn">
+    <wsdl:part name="parameters" element="tns:deleteItem" />
+  </wsdl:message>
+  <wsdl:message name="deleteItemSoapOut">
+    <wsdl:part name="parameters" element="tns:deleteItemResponse" />
+  </wsdl:message>
+  <wsdl:message name="insertItemLangSoapIn">
+    <wsdl:part name="parameters" element="tns:insertItemLang" />
+  </wsdl:message>
+  <wsdl:message name="insertItemLangSoapOut">
+    <wsdl:part name="parameters" element="tns:insertItemLangResponse" />
+  </wsdl:message>
+  <wsdl:message name="updateItemLangSoapIn">
+    <wsdl:part name="parameters" element="tns:updateItemLang" />
+  </wsdl:message>
+  <wsdl:message name="updateItemLangSoapOut">
+    <wsdl:part name="parameters" element="tns:updateItemLangResponse" />
+  </wsdl:message>
+  <wsdl:message name="deleteItemLangSoapIn">
+    <wsdl:part name="parameters" element="tns:deleteItemLang" />
+  </wsdl:message>
+  <wsdl:message name="deleteItemLangSoapOut">
+    <wsdl:part name="parameters" element="tns:deleteItemLangResponse" />
+  </wsdl:message>
   <wsdl:portType name="Service1Soap">
     <wsdl:operation name="checkLogin">
       <wsdl:input message="tns:checkLoginSoapIn" />
@@ -384,6 +1046,161 @@
       <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Sua City_Lang</wsdl:documentation>
       <wsdl:input message="tns:updateCityLangSoapIn" />
       <wsdl:output message="tns:updateCityLangSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="insertPlace">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Them Moi Place</wsdl:documentation>
+      <wsdl:input message="tns:insertPlaceSoapIn" />
+      <wsdl:output message="tns:insertPlaceSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="updatePlace">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Sua Place</wsdl:documentation>
+      <wsdl:input message="tns:updatePlaceSoapIn" />
+      <wsdl:output message="tns:updatePlaceSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="deletePlace">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Xoa Place</wsdl:documentation>
+      <wsdl:input message="tns:deletePlaceSoapIn" />
+      <wsdl:output message="tns:deletePlaceSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="insertPlaceLang">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Them Moi Place_Lang</wsdl:documentation>
+      <wsdl:input message="tns:insertPlaceLangSoapIn" />
+      <wsdl:output message="tns:insertPlaceLangSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="deletePlaceLang">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Xoa Place_Lang</wsdl:documentation>
+      <wsdl:input message="tns:deletePlaceLangSoapIn" />
+      <wsdl:output message="tns:deletePlaceLangSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="updatePlaceLang">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Sua Place_Lang</wsdl:documentation>
+      <wsdl:input message="tns:updatePlaceLangSoapIn" />
+      <wsdl:output message="tns:updatePlaceLangSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="insertStore">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Them Moi Store</wsdl:documentation>
+      <wsdl:input message="tns:insertStoreSoapIn" />
+      <wsdl:output message="tns:insertStoreSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="updateStore">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Sua Store</wsdl:documentation>
+      <wsdl:input message="tns:updateStoreSoapIn" />
+      <wsdl:output message="tns:updateStoreSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="deleteStore">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Xoa Store</wsdl:documentation>
+      <wsdl:input message="tns:deleteStoreSoapIn" />
+      <wsdl:output message="tns:deleteStoreSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="insertStoreLang">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Them Moi Store_Lang</wsdl:documentation>
+      <wsdl:input message="tns:insertStoreLangSoapIn" />
+      <wsdl:output message="tns:insertStoreLangSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="deleteStoreLang">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Xoa Store_Lang</wsdl:documentation>
+      <wsdl:input message="tns:deleteStoreLangSoapIn" />
+      <wsdl:output message="tns:deleteStoreLangSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="updateStoreLang">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Sua Store_Lang</wsdl:documentation>
+      <wsdl:input message="tns:updateStoreLangSoapIn" />
+      <wsdl:output message="tns:updateStoreLangSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="insertLocation">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Them Moi Location</wsdl:documentation>
+      <wsdl:input message="tns:insertLocationSoapIn" />
+      <wsdl:output message="tns:insertLocationSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="updateLocation">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Sua Location</wsdl:documentation>
+      <wsdl:input message="tns:updateLocationSoapIn" />
+      <wsdl:output message="tns:updateLocationSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="deleteLocation">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Xoa Location</wsdl:documentation>
+      <wsdl:input message="tns:deleteLocationSoapIn" />
+      <wsdl:output message="tns:deleteLocationSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="insertLocationLang">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Them Moi Location_Lang</wsdl:documentation>
+      <wsdl:input message="tns:insertLocationLangSoapIn" />
+      <wsdl:output message="tns:insertLocationLangSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="deleteLocationLang">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Xoa Location_Lang</wsdl:documentation>
+      <wsdl:input message="tns:deleteLocationLangSoapIn" />
+      <wsdl:output message="tns:deleteLocationLangSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="updateLocationLang">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Sua Location_Lang</wsdl:documentation>
+      <wsdl:input message="tns:updateLocationLangSoapIn" />
+      <wsdl:output message="tns:updateLocationLangSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="insertCategory">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Them Moi Category</wsdl:documentation>
+      <wsdl:input message="tns:insertCategorySoapIn" />
+      <wsdl:output message="tns:insertCategorySoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="deleteCategory">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Xoa Category</wsdl:documentation>
+      <wsdl:input message="tns:deleteCategorySoapIn" />
+      <wsdl:output message="tns:deleteCategorySoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="insertCategoryLang">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Them Moi Category_Lang</wsdl:documentation>
+      <wsdl:input message="tns:insertCategoryLangSoapIn" />
+      <wsdl:output message="tns:insertCategoryLangSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="deleteCategoryLang">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Xoa Category_Lang</wsdl:documentation>
+      <wsdl:input message="tns:deleteCategoryLangSoapIn" />
+      <wsdl:output message="tns:deleteCategoryLangSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="updateCategoryLang">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Sua Category_Lang</wsdl:documentation>
+      <wsdl:input message="tns:updateCategoryLangSoapIn" />
+      <wsdl:output message="tns:updateCategoryLangSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="insertItemCategory">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Them Moi ITEM_CATEGORY</wsdl:documentation>
+      <wsdl:input message="tns:insertItemCategorySoapIn" />
+      <wsdl:output message="tns:insertItemCategorySoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="deleteItemCategory">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Xoa ITEM_CATEGORY</wsdl:documentation>
+      <wsdl:input message="tns:deleteItemCategorySoapIn" />
+      <wsdl:output message="tns:deleteItemCategorySoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="insertItem">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Them Moi ITEM</wsdl:documentation>
+      <wsdl:input message="tns:insertItemSoapIn" />
+      <wsdl:output message="tns:insertItemSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="updateItem">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Sua ITEM</wsdl:documentation>
+      <wsdl:input message="tns:updateItemSoapIn" />
+      <wsdl:output message="tns:updateItemSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="deleteItem">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Xoa ITEM</wsdl:documentation>
+      <wsdl:input message="tns:deleteItemSoapIn" />
+      <wsdl:output message="tns:deleteItemSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="insertItemLang">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Them Moi ITEM_LANG</wsdl:documentation>
+      <wsdl:input message="tns:insertItemLangSoapIn" />
+      <wsdl:output message="tns:insertItemLangSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="updateItemLang">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Sua ITEM_LANG</wsdl:documentation>
+      <wsdl:input message="tns:updateItemLangSoapIn" />
+      <wsdl:output message="tns:updateItemLangSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="deleteItemLang">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Xoa ITEM_LANG</wsdl:documentation>
+      <wsdl:input message="tns:deleteItemLangSoapIn" />
+      <wsdl:output message="tns:deleteItemLangSoapOut" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="Service1Soap" type="tns:Service1Soap">
@@ -514,6 +1331,285 @@
         <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
+    <wsdl:operation name="insertPlace">
+      <soap:operation soapAction="http://tempuri.org/insertPlace" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="updatePlace">
+      <soap:operation soapAction="http://tempuri.org/updatePlace" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="deletePlace">
+      <soap:operation soapAction="http://tempuri.org/deletePlace" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="insertPlaceLang">
+      <soap:operation soapAction="http://tempuri.org/insertPlaceLang" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="deletePlaceLang">
+      <soap:operation soapAction="http://tempuri.org/deletePlaceLang" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="updatePlaceLang">
+      <soap:operation soapAction="http://tempuri.org/updatePlaceLang" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="insertStore">
+      <soap:operation soapAction="http://tempuri.org/insertStore" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="updateStore">
+      <soap:operation soapAction="http://tempuri.org/updateStore" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="deleteStore">
+      <soap:operation soapAction="http://tempuri.org/deleteStore" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="insertStoreLang">
+      <soap:operation soapAction="http://tempuri.org/insertStoreLang" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="deleteStoreLang">
+      <soap:operation soapAction="http://tempuri.org/deleteStoreLang" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="updateStoreLang">
+      <soap:operation soapAction="http://tempuri.org/updateStoreLang" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="insertLocation">
+      <soap:operation soapAction="http://tempuri.org/insertLocation" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="updateLocation">
+      <soap:operation soapAction="http://tempuri.org/updateLocation" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="deleteLocation">
+      <soap:operation soapAction="http://tempuri.org/deleteLocation" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="insertLocationLang">
+      <soap:operation soapAction="http://tempuri.org/insertLocationLang" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="deleteLocationLang">
+      <soap:operation soapAction="http://tempuri.org/deleteLocationLang" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="updateLocationLang">
+      <soap:operation soapAction="http://tempuri.org/updateLocationLang" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="insertCategory">
+      <soap:operation soapAction="http://tempuri.org/insertCategory" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="deleteCategory">
+      <soap:operation soapAction="http://tempuri.org/deleteCategory" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="insertCategoryLang">
+      <soap:operation soapAction="http://tempuri.org/insertCategoryLang" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="deleteCategoryLang">
+      <soap:operation soapAction="http://tempuri.org/deleteCategoryLang" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="updateCategoryLang">
+      <soap:operation soapAction="http://tempuri.org/updateCategoryLang" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="insertItemCategory">
+      <soap:operation soapAction="http://tempuri.org/insertItemCategory" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="deleteItemCategory">
+      <soap:operation soapAction="http://tempuri.org/deleteItemCategory" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="insertItem">
+      <soap:operation soapAction="http://tempuri.org/insertItem" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="updateItem">
+      <soap:operation soapAction="http://tempuri.org/updateItem" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="deleteItem">
+      <soap:operation soapAction="http://tempuri.org/deleteItem" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="insertItemLang">
+      <soap:operation soapAction="http://tempuri.org/insertItemLang" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="updateItemLang">
+      <soap:operation soapAction="http://tempuri.org/updateItemLang" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="deleteItemLang">
+      <soap:operation soapAction="http://tempuri.org/deleteItemLang" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
   </wsdl:binding>
   <wsdl:binding name="Service1Soap12" type="tns:Service1Soap">
     <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
@@ -636,6 +1732,285 @@
     </wsdl:operation>
     <wsdl:operation name="updateCityLang">
       <soap12:operation soapAction="http://tempuri.org/updateCityLang" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="insertPlace">
+      <soap12:operation soapAction="http://tempuri.org/insertPlace" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="updatePlace">
+      <soap12:operation soapAction="http://tempuri.org/updatePlace" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="deletePlace">
+      <soap12:operation soapAction="http://tempuri.org/deletePlace" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="insertPlaceLang">
+      <soap12:operation soapAction="http://tempuri.org/insertPlaceLang" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="deletePlaceLang">
+      <soap12:operation soapAction="http://tempuri.org/deletePlaceLang" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="updatePlaceLang">
+      <soap12:operation soapAction="http://tempuri.org/updatePlaceLang" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="insertStore">
+      <soap12:operation soapAction="http://tempuri.org/insertStore" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="updateStore">
+      <soap12:operation soapAction="http://tempuri.org/updateStore" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="deleteStore">
+      <soap12:operation soapAction="http://tempuri.org/deleteStore" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="insertStoreLang">
+      <soap12:operation soapAction="http://tempuri.org/insertStoreLang" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="deleteStoreLang">
+      <soap12:operation soapAction="http://tempuri.org/deleteStoreLang" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="updateStoreLang">
+      <soap12:operation soapAction="http://tempuri.org/updateStoreLang" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="insertLocation">
+      <soap12:operation soapAction="http://tempuri.org/insertLocation" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="updateLocation">
+      <soap12:operation soapAction="http://tempuri.org/updateLocation" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="deleteLocation">
+      <soap12:operation soapAction="http://tempuri.org/deleteLocation" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="insertLocationLang">
+      <soap12:operation soapAction="http://tempuri.org/insertLocationLang" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="deleteLocationLang">
+      <soap12:operation soapAction="http://tempuri.org/deleteLocationLang" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="updateLocationLang">
+      <soap12:operation soapAction="http://tempuri.org/updateLocationLang" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="insertCategory">
+      <soap12:operation soapAction="http://tempuri.org/insertCategory" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="deleteCategory">
+      <soap12:operation soapAction="http://tempuri.org/deleteCategory" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="insertCategoryLang">
+      <soap12:operation soapAction="http://tempuri.org/insertCategoryLang" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="deleteCategoryLang">
+      <soap12:operation soapAction="http://tempuri.org/deleteCategoryLang" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="updateCategoryLang">
+      <soap12:operation soapAction="http://tempuri.org/updateCategoryLang" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="insertItemCategory">
+      <soap12:operation soapAction="http://tempuri.org/insertItemCategory" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="deleteItemCategory">
+      <soap12:operation soapAction="http://tempuri.org/deleteItemCategory" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="insertItem">
+      <soap12:operation soapAction="http://tempuri.org/insertItem" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="updateItem">
+      <soap12:operation soapAction="http://tempuri.org/updateItem" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="deleteItem">
+      <soap12:operation soapAction="http://tempuri.org/deleteItem" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="insertItemLang">
+      <soap12:operation soapAction="http://tempuri.org/insertItemLang" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="updateItemLang">
+      <soap12:operation soapAction="http://tempuri.org/updateItemLang" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="deleteItemLang">
+      <soap12:operation soapAction="http://tempuri.org/deleteItemLang" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>

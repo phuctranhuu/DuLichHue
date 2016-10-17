@@ -57,6 +57,68 @@ namespace HeThongQuanLyDuLich.ServiceFull {
         
         private System.Threading.SendOrPostCallback updateCityLangOperationCompleted;
         
+        private System.Threading.SendOrPostCallback insertPlaceOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback updatePlaceOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback deletePlaceOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback insertPlaceLangOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback deletePlaceLangOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback updatePlaceLangOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback insertStoreOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback updateStoreOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback deleteStoreOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback insertStoreLangOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback deleteStoreLangOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback updateStoreLangOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback insertLocationOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback updateLocationOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback deleteLocationOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback insertLocationLangOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback deleteLocationLangOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback updateLocationLangOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback insertCategoryOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback deleteCategoryOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback insertCategoryLangOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback deleteCategoryLangOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback updateCategoryLangOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback insertItemCategoryOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback deleteItemCategoryOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback insertItemOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback updateItemOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback deleteItemOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback insertItemLangOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback updateItemLangOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback deleteItemLangOperationCompleted;
+        
         private bool useDefaultCredentialsSetExplicitly;
         
         /// <remarks/>
@@ -136,6 +198,99 @@ namespace HeThongQuanLyDuLich.ServiceFull {
         
         /// <remarks/>
         public event updateCityLangCompletedEventHandler updateCityLangCompleted;
+        
+        /// <remarks/>
+        public event insertPlaceCompletedEventHandler insertPlaceCompleted;
+        
+        /// <remarks/>
+        public event updatePlaceCompletedEventHandler updatePlaceCompleted;
+        
+        /// <remarks/>
+        public event deletePlaceCompletedEventHandler deletePlaceCompleted;
+        
+        /// <remarks/>
+        public event insertPlaceLangCompletedEventHandler insertPlaceLangCompleted;
+        
+        /// <remarks/>
+        public event deletePlaceLangCompletedEventHandler deletePlaceLangCompleted;
+        
+        /// <remarks/>
+        public event updatePlaceLangCompletedEventHandler updatePlaceLangCompleted;
+        
+        /// <remarks/>
+        public event insertStoreCompletedEventHandler insertStoreCompleted;
+        
+        /// <remarks/>
+        public event updateStoreCompletedEventHandler updateStoreCompleted;
+        
+        /// <remarks/>
+        public event deleteStoreCompletedEventHandler deleteStoreCompleted;
+        
+        /// <remarks/>
+        public event insertStoreLangCompletedEventHandler insertStoreLangCompleted;
+        
+        /// <remarks/>
+        public event deleteStoreLangCompletedEventHandler deleteStoreLangCompleted;
+        
+        /// <remarks/>
+        public event updateStoreLangCompletedEventHandler updateStoreLangCompleted;
+        
+        /// <remarks/>
+        public event insertLocationCompletedEventHandler insertLocationCompleted;
+        
+        /// <remarks/>
+        public event updateLocationCompletedEventHandler updateLocationCompleted;
+        
+        /// <remarks/>
+        public event deleteLocationCompletedEventHandler deleteLocationCompleted;
+        
+        /// <remarks/>
+        public event insertLocationLangCompletedEventHandler insertLocationLangCompleted;
+        
+        /// <remarks/>
+        public event deleteLocationLangCompletedEventHandler deleteLocationLangCompleted;
+        
+        /// <remarks/>
+        public event updateLocationLangCompletedEventHandler updateLocationLangCompleted;
+        
+        /// <remarks/>
+        public event insertCategoryCompletedEventHandler insertCategoryCompleted;
+        
+        /// <remarks/>
+        public event deleteCategoryCompletedEventHandler deleteCategoryCompleted;
+        
+        /// <remarks/>
+        public event insertCategoryLangCompletedEventHandler insertCategoryLangCompleted;
+        
+        /// <remarks/>
+        public event deleteCategoryLangCompletedEventHandler deleteCategoryLangCompleted;
+        
+        /// <remarks/>
+        public event updateCategoryLangCompletedEventHandler updateCategoryLangCompleted;
+        
+        /// <remarks/>
+        public event insertItemCategoryCompletedEventHandler insertItemCategoryCompleted;
+        
+        /// <remarks/>
+        public event deleteItemCategoryCompletedEventHandler deleteItemCategoryCompleted;
+        
+        /// <remarks/>
+        public event insertItemCompletedEventHandler insertItemCompleted;
+        
+        /// <remarks/>
+        public event updateItemCompletedEventHandler updateItemCompleted;
+        
+        /// <remarks/>
+        public event deleteItemCompletedEventHandler deleteItemCompleted;
+        
+        /// <remarks/>
+        public event insertItemLangCompletedEventHandler insertItemLangCompleted;
+        
+        /// <remarks/>
+        public event updateItemLangCompletedEventHandler updateItemLangCompleted;
+        
+        /// <remarks/>
+        public event deleteItemLangCompletedEventHandler deleteItemLangCompleted;
         
         /// <remarks/>
         [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/checkLogin", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
@@ -562,6 +717,995 @@ namespace HeThongQuanLyDuLich.ServiceFull {
             if ((this.updateCityLangCompleted != null)) {
                 System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
                 this.updateCityLangCompleted(this, new updateCityLangCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/insertPlace", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public bool insertPlace([System.Xml.Serialization.XmlElementAttribute(DataType="base64Binary")] byte[] image, System.Guid idCity) {
+            object[] results = this.Invoke("insertPlace", new object[] {
+                        image,
+                        idCity});
+            return ((bool)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void insertPlaceAsync(byte[] image, System.Guid idCity) {
+            this.insertPlaceAsync(image, idCity, null);
+        }
+        
+        /// <remarks/>
+        public void insertPlaceAsync(byte[] image, System.Guid idCity, object userState) {
+            if ((this.insertPlaceOperationCompleted == null)) {
+                this.insertPlaceOperationCompleted = new System.Threading.SendOrPostCallback(this.OninsertPlaceOperationCompleted);
+            }
+            this.InvokeAsync("insertPlace", new object[] {
+                        image,
+                        idCity}, this.insertPlaceOperationCompleted, userState);
+        }
+        
+        private void OninsertPlaceOperationCompleted(object arg) {
+            if ((this.insertPlaceCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.insertPlaceCompleted(this, new insertPlaceCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/updatePlace", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public bool updatePlace(System.Guid idPlace, [System.Xml.Serialization.XmlElementAttribute(DataType="base64Binary")] byte[] image, System.Guid idCity) {
+            object[] results = this.Invoke("updatePlace", new object[] {
+                        idPlace,
+                        image,
+                        idCity});
+            return ((bool)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void updatePlaceAsync(System.Guid idPlace, byte[] image, System.Guid idCity) {
+            this.updatePlaceAsync(idPlace, image, idCity, null);
+        }
+        
+        /// <remarks/>
+        public void updatePlaceAsync(System.Guid idPlace, byte[] image, System.Guid idCity, object userState) {
+            if ((this.updatePlaceOperationCompleted == null)) {
+                this.updatePlaceOperationCompleted = new System.Threading.SendOrPostCallback(this.OnupdatePlaceOperationCompleted);
+            }
+            this.InvokeAsync("updatePlace", new object[] {
+                        idPlace,
+                        image,
+                        idCity}, this.updatePlaceOperationCompleted, userState);
+        }
+        
+        private void OnupdatePlaceOperationCompleted(object arg) {
+            if ((this.updatePlaceCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.updatePlaceCompleted(this, new updatePlaceCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/deletePlace", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public bool deletePlace(System.Guid idPlace) {
+            object[] results = this.Invoke("deletePlace", new object[] {
+                        idPlace});
+            return ((bool)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void deletePlaceAsync(System.Guid idPlace) {
+            this.deletePlaceAsync(idPlace, null);
+        }
+        
+        /// <remarks/>
+        public void deletePlaceAsync(System.Guid idPlace, object userState) {
+            if ((this.deletePlaceOperationCompleted == null)) {
+                this.deletePlaceOperationCompleted = new System.Threading.SendOrPostCallback(this.OndeletePlaceOperationCompleted);
+            }
+            this.InvokeAsync("deletePlace", new object[] {
+                        idPlace}, this.deletePlaceOperationCompleted, userState);
+        }
+        
+        private void OndeletePlaceOperationCompleted(object arg) {
+            if ((this.deletePlaceCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.deletePlaceCompleted(this, new deletePlaceCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/insertPlaceLang", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public bool insertPlaceLang(System.Guid idPlace, System.Guid idLang, string namePlace, string address, string information) {
+            object[] results = this.Invoke("insertPlaceLang", new object[] {
+                        idPlace,
+                        idLang,
+                        namePlace,
+                        address,
+                        information});
+            return ((bool)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void insertPlaceLangAsync(System.Guid idPlace, System.Guid idLang, string namePlace, string address, string information) {
+            this.insertPlaceLangAsync(idPlace, idLang, namePlace, address, information, null);
+        }
+        
+        /// <remarks/>
+        public void insertPlaceLangAsync(System.Guid idPlace, System.Guid idLang, string namePlace, string address, string information, object userState) {
+            if ((this.insertPlaceLangOperationCompleted == null)) {
+                this.insertPlaceLangOperationCompleted = new System.Threading.SendOrPostCallback(this.OninsertPlaceLangOperationCompleted);
+            }
+            this.InvokeAsync("insertPlaceLang", new object[] {
+                        idPlace,
+                        idLang,
+                        namePlace,
+                        address,
+                        information}, this.insertPlaceLangOperationCompleted, userState);
+        }
+        
+        private void OninsertPlaceLangOperationCompleted(object arg) {
+            if ((this.insertPlaceLangCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.insertPlaceLangCompleted(this, new insertPlaceLangCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/deletePlaceLang", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public bool deletePlaceLang(System.Guid idPlace, System.Guid idLang) {
+            object[] results = this.Invoke("deletePlaceLang", new object[] {
+                        idPlace,
+                        idLang});
+            return ((bool)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void deletePlaceLangAsync(System.Guid idPlace, System.Guid idLang) {
+            this.deletePlaceLangAsync(idPlace, idLang, null);
+        }
+        
+        /// <remarks/>
+        public void deletePlaceLangAsync(System.Guid idPlace, System.Guid idLang, object userState) {
+            if ((this.deletePlaceLangOperationCompleted == null)) {
+                this.deletePlaceLangOperationCompleted = new System.Threading.SendOrPostCallback(this.OndeletePlaceLangOperationCompleted);
+            }
+            this.InvokeAsync("deletePlaceLang", new object[] {
+                        idPlace,
+                        idLang}, this.deletePlaceLangOperationCompleted, userState);
+        }
+        
+        private void OndeletePlaceLangOperationCompleted(object arg) {
+            if ((this.deletePlaceLangCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.deletePlaceLangCompleted(this, new deletePlaceLangCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/updatePlaceLang", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public bool updatePlaceLang(System.Guid idPlace, System.Guid idLang, string namePlace, string address, string information) {
+            object[] results = this.Invoke("updatePlaceLang", new object[] {
+                        idPlace,
+                        idLang,
+                        namePlace,
+                        address,
+                        information});
+            return ((bool)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void updatePlaceLangAsync(System.Guid idPlace, System.Guid idLang, string namePlace, string address, string information) {
+            this.updatePlaceLangAsync(idPlace, idLang, namePlace, address, information, null);
+        }
+        
+        /// <remarks/>
+        public void updatePlaceLangAsync(System.Guid idPlace, System.Guid idLang, string namePlace, string address, string information, object userState) {
+            if ((this.updatePlaceLangOperationCompleted == null)) {
+                this.updatePlaceLangOperationCompleted = new System.Threading.SendOrPostCallback(this.OnupdatePlaceLangOperationCompleted);
+            }
+            this.InvokeAsync("updatePlaceLang", new object[] {
+                        idPlace,
+                        idLang,
+                        namePlace,
+                        address,
+                        information}, this.updatePlaceLangOperationCompleted, userState);
+        }
+        
+        private void OnupdatePlaceLangOperationCompleted(object arg) {
+            if ((this.updatePlaceLangCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.updatePlaceLangCompleted(this, new updatePlaceLangCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/insertStore", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public bool insertStore(System.Guid idPlace) {
+            object[] results = this.Invoke("insertStore", new object[] {
+                        idPlace});
+            return ((bool)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void insertStoreAsync(System.Guid idPlace) {
+            this.insertStoreAsync(idPlace, null);
+        }
+        
+        /// <remarks/>
+        public void insertStoreAsync(System.Guid idPlace, object userState) {
+            if ((this.insertStoreOperationCompleted == null)) {
+                this.insertStoreOperationCompleted = new System.Threading.SendOrPostCallback(this.OninsertStoreOperationCompleted);
+            }
+            this.InvokeAsync("insertStore", new object[] {
+                        idPlace}, this.insertStoreOperationCompleted, userState);
+        }
+        
+        private void OninsertStoreOperationCompleted(object arg) {
+            if ((this.insertStoreCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.insertStoreCompleted(this, new insertStoreCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/updateStore", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public bool updateStore(System.Guid idStore, System.Guid idPlace) {
+            object[] results = this.Invoke("updateStore", new object[] {
+                        idStore,
+                        idPlace});
+            return ((bool)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void updateStoreAsync(System.Guid idStore, System.Guid idPlace) {
+            this.updateStoreAsync(idStore, idPlace, null);
+        }
+        
+        /// <remarks/>
+        public void updateStoreAsync(System.Guid idStore, System.Guid idPlace, object userState) {
+            if ((this.updateStoreOperationCompleted == null)) {
+                this.updateStoreOperationCompleted = new System.Threading.SendOrPostCallback(this.OnupdateStoreOperationCompleted);
+            }
+            this.InvokeAsync("updateStore", new object[] {
+                        idStore,
+                        idPlace}, this.updateStoreOperationCompleted, userState);
+        }
+        
+        private void OnupdateStoreOperationCompleted(object arg) {
+            if ((this.updateStoreCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.updateStoreCompleted(this, new updateStoreCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/deleteStore", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public bool deleteStore(System.Guid idStore) {
+            object[] results = this.Invoke("deleteStore", new object[] {
+                        idStore});
+            return ((bool)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void deleteStoreAsync(System.Guid idStore) {
+            this.deleteStoreAsync(idStore, null);
+        }
+        
+        /// <remarks/>
+        public void deleteStoreAsync(System.Guid idStore, object userState) {
+            if ((this.deleteStoreOperationCompleted == null)) {
+                this.deleteStoreOperationCompleted = new System.Threading.SendOrPostCallback(this.OndeleteStoreOperationCompleted);
+            }
+            this.InvokeAsync("deleteStore", new object[] {
+                        idStore}, this.deleteStoreOperationCompleted, userState);
+        }
+        
+        private void OndeleteStoreOperationCompleted(object arg) {
+            if ((this.deleteStoreCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.deleteStoreCompleted(this, new deleteStoreCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/insertStoreLang", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public bool insertStoreLang(System.Guid idStore, System.Guid idLang, string nameStore) {
+            object[] results = this.Invoke("insertStoreLang", new object[] {
+                        idStore,
+                        idLang,
+                        nameStore});
+            return ((bool)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void insertStoreLangAsync(System.Guid idStore, System.Guid idLang, string nameStore) {
+            this.insertStoreLangAsync(idStore, idLang, nameStore, null);
+        }
+        
+        /// <remarks/>
+        public void insertStoreLangAsync(System.Guid idStore, System.Guid idLang, string nameStore, object userState) {
+            if ((this.insertStoreLangOperationCompleted == null)) {
+                this.insertStoreLangOperationCompleted = new System.Threading.SendOrPostCallback(this.OninsertStoreLangOperationCompleted);
+            }
+            this.InvokeAsync("insertStoreLang", new object[] {
+                        idStore,
+                        idLang,
+                        nameStore}, this.insertStoreLangOperationCompleted, userState);
+        }
+        
+        private void OninsertStoreLangOperationCompleted(object arg) {
+            if ((this.insertStoreLangCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.insertStoreLangCompleted(this, new insertStoreLangCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/deleteStoreLang", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public bool deleteStoreLang(System.Guid idStore, System.Guid idLang) {
+            object[] results = this.Invoke("deleteStoreLang", new object[] {
+                        idStore,
+                        idLang});
+            return ((bool)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void deleteStoreLangAsync(System.Guid idStore, System.Guid idLang) {
+            this.deleteStoreLangAsync(idStore, idLang, null);
+        }
+        
+        /// <remarks/>
+        public void deleteStoreLangAsync(System.Guid idStore, System.Guid idLang, object userState) {
+            if ((this.deleteStoreLangOperationCompleted == null)) {
+                this.deleteStoreLangOperationCompleted = new System.Threading.SendOrPostCallback(this.OndeleteStoreLangOperationCompleted);
+            }
+            this.InvokeAsync("deleteStoreLang", new object[] {
+                        idStore,
+                        idLang}, this.deleteStoreLangOperationCompleted, userState);
+        }
+        
+        private void OndeleteStoreLangOperationCompleted(object arg) {
+            if ((this.deleteStoreLangCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.deleteStoreLangCompleted(this, new deleteStoreLangCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/updateStoreLang", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public bool updateStoreLang(System.Guid idStore, System.Guid idLang, string nameStore) {
+            object[] results = this.Invoke("updateStoreLang", new object[] {
+                        idStore,
+                        idLang,
+                        nameStore});
+            return ((bool)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void updateStoreLangAsync(System.Guid idStore, System.Guid idLang, string nameStore) {
+            this.updateStoreLangAsync(idStore, idLang, nameStore, null);
+        }
+        
+        /// <remarks/>
+        public void updateStoreLangAsync(System.Guid idStore, System.Guid idLang, string nameStore, object userState) {
+            if ((this.updateStoreLangOperationCompleted == null)) {
+                this.updateStoreLangOperationCompleted = new System.Threading.SendOrPostCallback(this.OnupdateStoreLangOperationCompleted);
+            }
+            this.InvokeAsync("updateStoreLang", new object[] {
+                        idStore,
+                        idLang,
+                        nameStore}, this.updateStoreLangOperationCompleted, userState);
+        }
+        
+        private void OnupdateStoreLangOperationCompleted(object arg) {
+            if ((this.updateStoreLangCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.updateStoreLangCompleted(this, new updateStoreLangCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/insertLocation", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public bool insertLocation(System.Guid idStore) {
+            object[] results = this.Invoke("insertLocation", new object[] {
+                        idStore});
+            return ((bool)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void insertLocationAsync(System.Guid idStore) {
+            this.insertLocationAsync(idStore, null);
+        }
+        
+        /// <remarks/>
+        public void insertLocationAsync(System.Guid idStore, object userState) {
+            if ((this.insertLocationOperationCompleted == null)) {
+                this.insertLocationOperationCompleted = new System.Threading.SendOrPostCallback(this.OninsertLocationOperationCompleted);
+            }
+            this.InvokeAsync("insertLocation", new object[] {
+                        idStore}, this.insertLocationOperationCompleted, userState);
+        }
+        
+        private void OninsertLocationOperationCompleted(object arg) {
+            if ((this.insertLocationCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.insertLocationCompleted(this, new insertLocationCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/updateLocation", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public bool updateLocation(System.Guid idLocation, System.Guid idStore) {
+            object[] results = this.Invoke("updateLocation", new object[] {
+                        idLocation,
+                        idStore});
+            return ((bool)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void updateLocationAsync(System.Guid idLocation, System.Guid idStore) {
+            this.updateLocationAsync(idLocation, idStore, null);
+        }
+        
+        /// <remarks/>
+        public void updateLocationAsync(System.Guid idLocation, System.Guid idStore, object userState) {
+            if ((this.updateLocationOperationCompleted == null)) {
+                this.updateLocationOperationCompleted = new System.Threading.SendOrPostCallback(this.OnupdateLocationOperationCompleted);
+            }
+            this.InvokeAsync("updateLocation", new object[] {
+                        idLocation,
+                        idStore}, this.updateLocationOperationCompleted, userState);
+        }
+        
+        private void OnupdateLocationOperationCompleted(object arg) {
+            if ((this.updateLocationCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.updateLocationCompleted(this, new updateLocationCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/deleteLocation", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public bool deleteLocation(System.Guid idLocation) {
+            object[] results = this.Invoke("deleteLocation", new object[] {
+                        idLocation});
+            return ((bool)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void deleteLocationAsync(System.Guid idLocation) {
+            this.deleteLocationAsync(idLocation, null);
+        }
+        
+        /// <remarks/>
+        public void deleteLocationAsync(System.Guid idLocation, object userState) {
+            if ((this.deleteLocationOperationCompleted == null)) {
+                this.deleteLocationOperationCompleted = new System.Threading.SendOrPostCallback(this.OndeleteLocationOperationCompleted);
+            }
+            this.InvokeAsync("deleteLocation", new object[] {
+                        idLocation}, this.deleteLocationOperationCompleted, userState);
+        }
+        
+        private void OndeleteLocationOperationCompleted(object arg) {
+            if ((this.deleteLocationCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.deleteLocationCompleted(this, new deleteLocationCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/insertLocationLang", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public bool insertLocationLang(System.Guid idLocation, System.Guid idLang, string nameLocation) {
+            object[] results = this.Invoke("insertLocationLang", new object[] {
+                        idLocation,
+                        idLang,
+                        nameLocation});
+            return ((bool)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void insertLocationLangAsync(System.Guid idLocation, System.Guid idLang, string nameLocation) {
+            this.insertLocationLangAsync(idLocation, idLang, nameLocation, null);
+        }
+        
+        /// <remarks/>
+        public void insertLocationLangAsync(System.Guid idLocation, System.Guid idLang, string nameLocation, object userState) {
+            if ((this.insertLocationLangOperationCompleted == null)) {
+                this.insertLocationLangOperationCompleted = new System.Threading.SendOrPostCallback(this.OninsertLocationLangOperationCompleted);
+            }
+            this.InvokeAsync("insertLocationLang", new object[] {
+                        idLocation,
+                        idLang,
+                        nameLocation}, this.insertLocationLangOperationCompleted, userState);
+        }
+        
+        private void OninsertLocationLangOperationCompleted(object arg) {
+            if ((this.insertLocationLangCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.insertLocationLangCompleted(this, new insertLocationLangCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/deleteLocationLang", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public bool deleteLocationLang(System.Guid idLocation, System.Guid idLang) {
+            object[] results = this.Invoke("deleteLocationLang", new object[] {
+                        idLocation,
+                        idLang});
+            return ((bool)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void deleteLocationLangAsync(System.Guid idLocation, System.Guid idLang) {
+            this.deleteLocationLangAsync(idLocation, idLang, null);
+        }
+        
+        /// <remarks/>
+        public void deleteLocationLangAsync(System.Guid idLocation, System.Guid idLang, object userState) {
+            if ((this.deleteLocationLangOperationCompleted == null)) {
+                this.deleteLocationLangOperationCompleted = new System.Threading.SendOrPostCallback(this.OndeleteLocationLangOperationCompleted);
+            }
+            this.InvokeAsync("deleteLocationLang", new object[] {
+                        idLocation,
+                        idLang}, this.deleteLocationLangOperationCompleted, userState);
+        }
+        
+        private void OndeleteLocationLangOperationCompleted(object arg) {
+            if ((this.deleteLocationLangCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.deleteLocationLangCompleted(this, new deleteLocationLangCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/updateLocationLang", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public bool updateLocationLang(System.Guid idLocation, System.Guid idLang, string nameLocation) {
+            object[] results = this.Invoke("updateLocationLang", new object[] {
+                        idLocation,
+                        idLang,
+                        nameLocation});
+            return ((bool)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void updateLocationLangAsync(System.Guid idLocation, System.Guid idLang, string nameLocation) {
+            this.updateLocationLangAsync(idLocation, idLang, nameLocation, null);
+        }
+        
+        /// <remarks/>
+        public void updateLocationLangAsync(System.Guid idLocation, System.Guid idLang, string nameLocation, object userState) {
+            if ((this.updateLocationLangOperationCompleted == null)) {
+                this.updateLocationLangOperationCompleted = new System.Threading.SendOrPostCallback(this.OnupdateLocationLangOperationCompleted);
+            }
+            this.InvokeAsync("updateLocationLang", new object[] {
+                        idLocation,
+                        idLang,
+                        nameLocation}, this.updateLocationLangOperationCompleted, userState);
+        }
+        
+        private void OnupdateLocationLangOperationCompleted(object arg) {
+            if ((this.updateLocationLangCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.updateLocationLangCompleted(this, new updateLocationLangCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/insertCategory", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public bool insertCategory() {
+            object[] results = this.Invoke("insertCategory", new object[0]);
+            return ((bool)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void insertCategoryAsync() {
+            this.insertCategoryAsync(null);
+        }
+        
+        /// <remarks/>
+        public void insertCategoryAsync(object userState) {
+            if ((this.insertCategoryOperationCompleted == null)) {
+                this.insertCategoryOperationCompleted = new System.Threading.SendOrPostCallback(this.OninsertCategoryOperationCompleted);
+            }
+            this.InvokeAsync("insertCategory", new object[0], this.insertCategoryOperationCompleted, userState);
+        }
+        
+        private void OninsertCategoryOperationCompleted(object arg) {
+            if ((this.insertCategoryCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.insertCategoryCompleted(this, new insertCategoryCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/deleteCategory", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public bool deleteCategory(System.Guid idCategory) {
+            object[] results = this.Invoke("deleteCategory", new object[] {
+                        idCategory});
+            return ((bool)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void deleteCategoryAsync(System.Guid idCategory) {
+            this.deleteCategoryAsync(idCategory, null);
+        }
+        
+        /// <remarks/>
+        public void deleteCategoryAsync(System.Guid idCategory, object userState) {
+            if ((this.deleteCategoryOperationCompleted == null)) {
+                this.deleteCategoryOperationCompleted = new System.Threading.SendOrPostCallback(this.OndeleteCategoryOperationCompleted);
+            }
+            this.InvokeAsync("deleteCategory", new object[] {
+                        idCategory}, this.deleteCategoryOperationCompleted, userState);
+        }
+        
+        private void OndeleteCategoryOperationCompleted(object arg) {
+            if ((this.deleteCategoryCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.deleteCategoryCompleted(this, new deleteCategoryCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/insertCategoryLang", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public bool insertCategoryLang(System.Guid idCategory, System.Guid idLang, string nameCategory) {
+            object[] results = this.Invoke("insertCategoryLang", new object[] {
+                        idCategory,
+                        idLang,
+                        nameCategory});
+            return ((bool)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void insertCategoryLangAsync(System.Guid idCategory, System.Guid idLang, string nameCategory) {
+            this.insertCategoryLangAsync(idCategory, idLang, nameCategory, null);
+        }
+        
+        /// <remarks/>
+        public void insertCategoryLangAsync(System.Guid idCategory, System.Guid idLang, string nameCategory, object userState) {
+            if ((this.insertCategoryLangOperationCompleted == null)) {
+                this.insertCategoryLangOperationCompleted = new System.Threading.SendOrPostCallback(this.OninsertCategoryLangOperationCompleted);
+            }
+            this.InvokeAsync("insertCategoryLang", new object[] {
+                        idCategory,
+                        idLang,
+                        nameCategory}, this.insertCategoryLangOperationCompleted, userState);
+        }
+        
+        private void OninsertCategoryLangOperationCompleted(object arg) {
+            if ((this.insertCategoryLangCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.insertCategoryLangCompleted(this, new insertCategoryLangCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/deleteCategoryLang", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public bool deleteCategoryLang(System.Guid idCategory, System.Guid idLang) {
+            object[] results = this.Invoke("deleteCategoryLang", new object[] {
+                        idCategory,
+                        idLang});
+            return ((bool)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void deleteCategoryLangAsync(System.Guid idCategory, System.Guid idLang) {
+            this.deleteCategoryLangAsync(idCategory, idLang, null);
+        }
+        
+        /// <remarks/>
+        public void deleteCategoryLangAsync(System.Guid idCategory, System.Guid idLang, object userState) {
+            if ((this.deleteCategoryLangOperationCompleted == null)) {
+                this.deleteCategoryLangOperationCompleted = new System.Threading.SendOrPostCallback(this.OndeleteCategoryLangOperationCompleted);
+            }
+            this.InvokeAsync("deleteCategoryLang", new object[] {
+                        idCategory,
+                        idLang}, this.deleteCategoryLangOperationCompleted, userState);
+        }
+        
+        private void OndeleteCategoryLangOperationCompleted(object arg) {
+            if ((this.deleteCategoryLangCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.deleteCategoryLangCompleted(this, new deleteCategoryLangCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/updateCategoryLang", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public bool updateCategoryLang(System.Guid idCategory, System.Guid idLang, string nameCategory) {
+            object[] results = this.Invoke("updateCategoryLang", new object[] {
+                        idCategory,
+                        idLang,
+                        nameCategory});
+            return ((bool)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void updateCategoryLangAsync(System.Guid idCategory, System.Guid idLang, string nameCategory) {
+            this.updateCategoryLangAsync(idCategory, idLang, nameCategory, null);
+        }
+        
+        /// <remarks/>
+        public void updateCategoryLangAsync(System.Guid idCategory, System.Guid idLang, string nameCategory, object userState) {
+            if ((this.updateCategoryLangOperationCompleted == null)) {
+                this.updateCategoryLangOperationCompleted = new System.Threading.SendOrPostCallback(this.OnupdateCategoryLangOperationCompleted);
+            }
+            this.InvokeAsync("updateCategoryLang", new object[] {
+                        idCategory,
+                        idLang,
+                        nameCategory}, this.updateCategoryLangOperationCompleted, userState);
+        }
+        
+        private void OnupdateCategoryLangOperationCompleted(object arg) {
+            if ((this.updateCategoryLangCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.updateCategoryLangCompleted(this, new updateCategoryLangCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/insertItemCategory", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public bool insertItemCategory(System.Guid idItem, System.Guid idCategory) {
+            object[] results = this.Invoke("insertItemCategory", new object[] {
+                        idItem,
+                        idCategory});
+            return ((bool)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void insertItemCategoryAsync(System.Guid idItem, System.Guid idCategory) {
+            this.insertItemCategoryAsync(idItem, idCategory, null);
+        }
+        
+        /// <remarks/>
+        public void insertItemCategoryAsync(System.Guid idItem, System.Guid idCategory, object userState) {
+            if ((this.insertItemCategoryOperationCompleted == null)) {
+                this.insertItemCategoryOperationCompleted = new System.Threading.SendOrPostCallback(this.OninsertItemCategoryOperationCompleted);
+            }
+            this.InvokeAsync("insertItemCategory", new object[] {
+                        idItem,
+                        idCategory}, this.insertItemCategoryOperationCompleted, userState);
+        }
+        
+        private void OninsertItemCategoryOperationCompleted(object arg) {
+            if ((this.insertItemCategoryCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.insertItemCategoryCompleted(this, new insertItemCategoryCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/deleteItemCategory", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public bool deleteItemCategory(System.Guid idItem, System.Guid idCategory) {
+            object[] results = this.Invoke("deleteItemCategory", new object[] {
+                        idItem,
+                        idCategory});
+            return ((bool)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void deleteItemCategoryAsync(System.Guid idItem, System.Guid idCategory) {
+            this.deleteItemCategoryAsync(idItem, idCategory, null);
+        }
+        
+        /// <remarks/>
+        public void deleteItemCategoryAsync(System.Guid idItem, System.Guid idCategory, object userState) {
+            if ((this.deleteItemCategoryOperationCompleted == null)) {
+                this.deleteItemCategoryOperationCompleted = new System.Threading.SendOrPostCallback(this.OndeleteItemCategoryOperationCompleted);
+            }
+            this.InvokeAsync("deleteItemCategory", new object[] {
+                        idItem,
+                        idCategory}, this.deleteItemCategoryOperationCompleted, userState);
+        }
+        
+        private void OndeleteItemCategoryOperationCompleted(object arg) {
+            if ((this.deleteItemCategoryCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.deleteItemCategoryCompleted(this, new deleteItemCategoryCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/insertItem", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public bool insertItem(System.Guid idItem, [System.Xml.Serialization.XmlElementAttribute(DataType="base64Binary")] byte[] imageItem, System.Guid idLocation) {
+            object[] results = this.Invoke("insertItem", new object[] {
+                        idItem,
+                        imageItem,
+                        idLocation});
+            return ((bool)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void insertItemAsync(System.Guid idItem, byte[] imageItem, System.Guid idLocation) {
+            this.insertItemAsync(idItem, imageItem, idLocation, null);
+        }
+        
+        /// <remarks/>
+        public void insertItemAsync(System.Guid idItem, byte[] imageItem, System.Guid idLocation, object userState) {
+            if ((this.insertItemOperationCompleted == null)) {
+                this.insertItemOperationCompleted = new System.Threading.SendOrPostCallback(this.OninsertItemOperationCompleted);
+            }
+            this.InvokeAsync("insertItem", new object[] {
+                        idItem,
+                        imageItem,
+                        idLocation}, this.insertItemOperationCompleted, userState);
+        }
+        
+        private void OninsertItemOperationCompleted(object arg) {
+            if ((this.insertItemCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.insertItemCompleted(this, new insertItemCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/updateItem", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public bool updateItem(System.Guid idItem, [System.Xml.Serialization.XmlElementAttribute(DataType="base64Binary")] byte[] imageItem, System.Guid idLocation) {
+            object[] results = this.Invoke("updateItem", new object[] {
+                        idItem,
+                        imageItem,
+                        idLocation});
+            return ((bool)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void updateItemAsync(System.Guid idItem, byte[] imageItem, System.Guid idLocation) {
+            this.updateItemAsync(idItem, imageItem, idLocation, null);
+        }
+        
+        /// <remarks/>
+        public void updateItemAsync(System.Guid idItem, byte[] imageItem, System.Guid idLocation, object userState) {
+            if ((this.updateItemOperationCompleted == null)) {
+                this.updateItemOperationCompleted = new System.Threading.SendOrPostCallback(this.OnupdateItemOperationCompleted);
+            }
+            this.InvokeAsync("updateItem", new object[] {
+                        idItem,
+                        imageItem,
+                        idLocation}, this.updateItemOperationCompleted, userState);
+        }
+        
+        private void OnupdateItemOperationCompleted(object arg) {
+            if ((this.updateItemCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.updateItemCompleted(this, new updateItemCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/deleteItem", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public bool deleteItem(System.Guid idItem) {
+            object[] results = this.Invoke("deleteItem", new object[] {
+                        idItem});
+            return ((bool)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void deleteItemAsync(System.Guid idItem) {
+            this.deleteItemAsync(idItem, null);
+        }
+        
+        /// <remarks/>
+        public void deleteItemAsync(System.Guid idItem, object userState) {
+            if ((this.deleteItemOperationCompleted == null)) {
+                this.deleteItemOperationCompleted = new System.Threading.SendOrPostCallback(this.OndeleteItemOperationCompleted);
+            }
+            this.InvokeAsync("deleteItem", new object[] {
+                        idItem}, this.deleteItemOperationCompleted, userState);
+        }
+        
+        private void OndeleteItemOperationCompleted(object arg) {
+            if ((this.deleteItemCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.deleteItemCompleted(this, new deleteItemCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/insertItemLang", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public bool insertItemLang(System.Guid idItem, System.Guid idLang, string nameItem, string information, string audio, string video) {
+            object[] results = this.Invoke("insertItemLang", new object[] {
+                        idItem,
+                        idLang,
+                        nameItem,
+                        information,
+                        audio,
+                        video});
+            return ((bool)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void insertItemLangAsync(System.Guid idItem, System.Guid idLang, string nameItem, string information, string audio, string video) {
+            this.insertItemLangAsync(idItem, idLang, nameItem, information, audio, video, null);
+        }
+        
+        /// <remarks/>
+        public void insertItemLangAsync(System.Guid idItem, System.Guid idLang, string nameItem, string information, string audio, string video, object userState) {
+            if ((this.insertItemLangOperationCompleted == null)) {
+                this.insertItemLangOperationCompleted = new System.Threading.SendOrPostCallback(this.OninsertItemLangOperationCompleted);
+            }
+            this.InvokeAsync("insertItemLang", new object[] {
+                        idItem,
+                        idLang,
+                        nameItem,
+                        information,
+                        audio,
+                        video}, this.insertItemLangOperationCompleted, userState);
+        }
+        
+        private void OninsertItemLangOperationCompleted(object arg) {
+            if ((this.insertItemLangCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.insertItemLangCompleted(this, new insertItemLangCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/updateItemLang", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public bool updateItemLang(System.Guid idItem, System.Guid idLang, string nameItem, string information, string audio, string video) {
+            object[] results = this.Invoke("updateItemLang", new object[] {
+                        idItem,
+                        idLang,
+                        nameItem,
+                        information,
+                        audio,
+                        video});
+            return ((bool)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void updateItemLangAsync(System.Guid idItem, System.Guid idLang, string nameItem, string information, string audio, string video) {
+            this.updateItemLangAsync(idItem, idLang, nameItem, information, audio, video, null);
+        }
+        
+        /// <remarks/>
+        public void updateItemLangAsync(System.Guid idItem, System.Guid idLang, string nameItem, string information, string audio, string video, object userState) {
+            if ((this.updateItemLangOperationCompleted == null)) {
+                this.updateItemLangOperationCompleted = new System.Threading.SendOrPostCallback(this.OnupdateItemLangOperationCompleted);
+            }
+            this.InvokeAsync("updateItemLang", new object[] {
+                        idItem,
+                        idLang,
+                        nameItem,
+                        information,
+                        audio,
+                        video}, this.updateItemLangOperationCompleted, userState);
+        }
+        
+        private void OnupdateItemLangOperationCompleted(object arg) {
+            if ((this.updateItemLangCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.updateItemLangCompleted(this, new updateItemLangCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/deleteItemLang", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public bool deleteItemLang(System.Guid idItem, System.Guid idLang) {
+            object[] results = this.Invoke("deleteItemLang", new object[] {
+                        idItem,
+                        idLang});
+            return ((bool)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void deleteItemLangAsync(System.Guid idItem, System.Guid idLang) {
+            this.deleteItemLangAsync(idItem, idLang, null);
+        }
+        
+        /// <remarks/>
+        public void deleteItemLangAsync(System.Guid idItem, System.Guid idLang, object userState) {
+            if ((this.deleteItemLangOperationCompleted == null)) {
+                this.deleteItemLangOperationCompleted = new System.Threading.SendOrPostCallback(this.OndeleteItemLangOperationCompleted);
+            }
+            this.InvokeAsync("deleteItemLang", new object[] {
+                        idItem,
+                        idLang}, this.deleteItemLangOperationCompleted, userState);
+        }
+        
+        private void OndeleteItemLangOperationCompleted(object arg) {
+            if ((this.deleteItemLangCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.deleteItemLangCompleted(this, new deleteItemLangCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
             }
         }
         
@@ -1038,6 +2182,812 @@ namespace HeThongQuanLyDuLich.ServiceFull {
         private object[] results;
         
         internal updateCityLangCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public bool Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((bool)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
+    public delegate void insertPlaceCompletedEventHandler(object sender, insertPlaceCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class insertPlaceCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal insertPlaceCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public bool Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((bool)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
+    public delegate void updatePlaceCompletedEventHandler(object sender, updatePlaceCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class updatePlaceCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal updatePlaceCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public bool Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((bool)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
+    public delegate void deletePlaceCompletedEventHandler(object sender, deletePlaceCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class deletePlaceCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal deletePlaceCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public bool Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((bool)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
+    public delegate void insertPlaceLangCompletedEventHandler(object sender, insertPlaceLangCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class insertPlaceLangCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal insertPlaceLangCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public bool Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((bool)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
+    public delegate void deletePlaceLangCompletedEventHandler(object sender, deletePlaceLangCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class deletePlaceLangCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal deletePlaceLangCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public bool Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((bool)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
+    public delegate void updatePlaceLangCompletedEventHandler(object sender, updatePlaceLangCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class updatePlaceLangCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal updatePlaceLangCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public bool Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((bool)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
+    public delegate void insertStoreCompletedEventHandler(object sender, insertStoreCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class insertStoreCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal insertStoreCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public bool Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((bool)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
+    public delegate void updateStoreCompletedEventHandler(object sender, updateStoreCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class updateStoreCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal updateStoreCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public bool Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((bool)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
+    public delegate void deleteStoreCompletedEventHandler(object sender, deleteStoreCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class deleteStoreCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal deleteStoreCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public bool Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((bool)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
+    public delegate void insertStoreLangCompletedEventHandler(object sender, insertStoreLangCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class insertStoreLangCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal insertStoreLangCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public bool Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((bool)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
+    public delegate void deleteStoreLangCompletedEventHandler(object sender, deleteStoreLangCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class deleteStoreLangCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal deleteStoreLangCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public bool Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((bool)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
+    public delegate void updateStoreLangCompletedEventHandler(object sender, updateStoreLangCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class updateStoreLangCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal updateStoreLangCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public bool Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((bool)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
+    public delegate void insertLocationCompletedEventHandler(object sender, insertLocationCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class insertLocationCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal insertLocationCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public bool Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((bool)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
+    public delegate void updateLocationCompletedEventHandler(object sender, updateLocationCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class updateLocationCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal updateLocationCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public bool Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((bool)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
+    public delegate void deleteLocationCompletedEventHandler(object sender, deleteLocationCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class deleteLocationCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal deleteLocationCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public bool Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((bool)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
+    public delegate void insertLocationLangCompletedEventHandler(object sender, insertLocationLangCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class insertLocationLangCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal insertLocationLangCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public bool Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((bool)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
+    public delegate void deleteLocationLangCompletedEventHandler(object sender, deleteLocationLangCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class deleteLocationLangCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal deleteLocationLangCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public bool Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((bool)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
+    public delegate void updateLocationLangCompletedEventHandler(object sender, updateLocationLangCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class updateLocationLangCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal updateLocationLangCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public bool Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((bool)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
+    public delegate void insertCategoryCompletedEventHandler(object sender, insertCategoryCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class insertCategoryCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal insertCategoryCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public bool Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((bool)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
+    public delegate void deleteCategoryCompletedEventHandler(object sender, deleteCategoryCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class deleteCategoryCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal deleteCategoryCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public bool Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((bool)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
+    public delegate void insertCategoryLangCompletedEventHandler(object sender, insertCategoryLangCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class insertCategoryLangCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal insertCategoryLangCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public bool Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((bool)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
+    public delegate void deleteCategoryLangCompletedEventHandler(object sender, deleteCategoryLangCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class deleteCategoryLangCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal deleteCategoryLangCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public bool Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((bool)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
+    public delegate void updateCategoryLangCompletedEventHandler(object sender, updateCategoryLangCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class updateCategoryLangCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal updateCategoryLangCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public bool Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((bool)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
+    public delegate void insertItemCategoryCompletedEventHandler(object sender, insertItemCategoryCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class insertItemCategoryCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal insertItemCategoryCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public bool Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((bool)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
+    public delegate void deleteItemCategoryCompletedEventHandler(object sender, deleteItemCategoryCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class deleteItemCategoryCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal deleteItemCategoryCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public bool Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((bool)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
+    public delegate void insertItemCompletedEventHandler(object sender, insertItemCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class insertItemCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal insertItemCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public bool Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((bool)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
+    public delegate void updateItemCompletedEventHandler(object sender, updateItemCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class updateItemCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal updateItemCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public bool Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((bool)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
+    public delegate void deleteItemCompletedEventHandler(object sender, deleteItemCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class deleteItemCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal deleteItemCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public bool Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((bool)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
+    public delegate void insertItemLangCompletedEventHandler(object sender, insertItemLangCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class insertItemLangCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal insertItemLangCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public bool Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((bool)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
+    public delegate void updateItemLangCompletedEventHandler(object sender, updateItemLangCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class updateItemLangCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal updateItemLangCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public bool Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((bool)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
+    public delegate void deleteItemLangCompletedEventHandler(object sender, deleteItemLangCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class deleteItemLangCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal deleteItemLangCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
                 base(exception, cancelled, userState) {
             this.results = results;
         }

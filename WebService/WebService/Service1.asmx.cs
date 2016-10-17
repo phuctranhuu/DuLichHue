@@ -3,7 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Services;
-
+using System.Data.Linq.Mapping;
+using System.Data.Linq;
+using System.Data.Linq.Provider;
 namespace WebService
 {
     /// <summary>
@@ -323,12 +325,11 @@ namespace WebService
             return kt;
         }
         #endregion 
-    
+        
         #region Table Place va Place_Lang
-        //Thêm Place. Nếu thêm thành công thì sẽ trả về true, ngược lại trả về false
         //insert Place
         [WebMethod(Description = "Them Moi Place")]
-        public bool insertPlace(System.Data.Linq.Binary image, Guid idCity)
+        public bool insertPlace(byte[] image, Guid idCity)
         {
             bool kt = false;
             try
@@ -336,7 +337,7 @@ namespace WebService
                 Place place = new Place();
                 place.IdPlace = Guid.NewGuid();
                 place.IdCity = idCity;
-                place.ImagePlace = image;
+                place.ImagePlace = new Binary(image);
                 db.Places.InsertOnSubmit(place);
                 db.SubmitChanges();
                 kt = true;
@@ -350,7 +351,7 @@ namespace WebService
 
         //update Place
         [WebMethod(Description = "Sua Place")]
-        public bool updatePlace(Guid idPlace, System.Data.Linq.Binary image, Guid idCity)
+        public bool updatePlace(Guid idPlace, byte[] image, Guid idCity)
         {
             bool kt = false;
             try
@@ -360,7 +361,7 @@ namespace WebService
                               select pl;
                 foreach (Place p in truyvan)
                 {
-                    p.ImagePlace = image;
+                    p.ImagePlace = new Binary(image);
                     p.IdCity = idCity;
                 }
                 db.SubmitChanges();
@@ -471,7 +472,7 @@ namespace WebService
             return kt;
         }
         #endregion 
-    
+   
         #region Table Store va Store_Lang
         //Thêm Place. Nếu thêm thành công thì sẽ trả về true, ngược lại trả về false
         //insert Store
@@ -876,20 +877,200 @@ namespace WebService
 
         #region Table Item, Item_Lang va Item_Category
         /*--- ITEM_CATEGORY ---*/
-        //Insert Item_Category
+        //Insert ITEM_CATEGORY
+        [WebMethod(Description = "Them Moi ITEM_CATEGORY")]
+        public bool insertItemCategory(Guid idItem, Guid idCategory)
+        {
+            bool kt = false;
+            try
+            {
+                Item_Category itemCategory = new Item_Category();
+                itemCategory.IdItem = idItem;
+                itemCategory.IdCategory = idCategory;
+                db.Item_Categories.InsertOnSubmit(itemCategory);
+                db.SubmitChanges();
+                kt = true;
+            }
+            catch (Exception ex)
+            {
+                kt = false;
+            }
+            return kt;
+        }
+
         //Delete Item_Category
+        [WebMethod(Description = "Xoa ITEM_CATEGORY")]
+        public bool deleteItemCategory(Guid idItem, Guid idCategory)
+        {
+            bool kt = false;
+            try
+            {
+                var truyvan = from itct in db.Item_Categories
+                              where itct.IdItem == idItem && itct.IdCategory == idCategory
+                              select itct;
+                foreach (Item_Category ic in truyvan)
+                {
+                    db.Item_Categories.DeleteOnSubmit(ic);
+                }
+                db.SubmitChanges();
+                kt = true;
+            }
+            catch (Exception ex)
+            {
+                kt = false;
+            }
+            return kt;
+        }
 
         /*--- ITEM ---*/
         //Insert Item
+        
+        [WebMethod(Description = "Them Moi ITEM")]
+        public bool insertItem(Guid idItem, byte[] imageItem ,Guid idLocation)
+        {
+            bool kt = false;
+            try
+            {
+                Item item = new Item();
+                item.IdItem = Guid.NewGuid();
+                item.ImageItem = new Binary(imageItem);
+                item.IdLocation = idLocation;
+                db.Items.InsertOnSubmit(item);
+                db.SubmitChanges();
+                kt = true;
+            }
+            catch (Exception ex)
+            {
+                kt = false;
+            }
+            return kt;
+        }
+        
         //Update Item
+        [WebMethod(Description = "Sua ITEM")]
+        public bool updateItem(Guid idItem, byte[] imageItem, Guid idLocation)
+        {
+            bool kt = false;
+            try
+            {
+                var truyvan = from it in db.Items
+                              where it.IdItem == idItem
+                              select it;
+                foreach (Item i in truyvan)
+                {
+                    Binary img = new Binary(imageItem);
+                    i.ImageItem = img;
+                    i.IdLocation = idLocation;
+                }
+                db.SubmitChanges();
+                kt = true;
+            }
+            catch (Exception ex)
+            {
+                kt = false;
+            }
+            return kt;
+        }
+        
         //Delete Item
-
+        [WebMethod(Description = "Xoa ITEM")]
+        public bool deleteItem(Guid idItem)
+        {
+            bool kt = false;
+            try
+            {
+                var truyvan = from it in db.Items
+                              where it.IdItem == idItem
+                              select it;
+                foreach (Item i in truyvan)
+                {
+                    db.Items.DeleteOnSubmit(i);
+                }
+                db.SubmitChanges();
+                kt = true;
+            }
+            catch (Exception ex)
+            {
+                kt = false;
+            }
+            return kt;
+        }
+        
         /*--- ITEM_LANG ---*/
         //Insert Item_Lang
+        [WebMethod(Description = "Them Moi ITEM_LANG")]
+        public bool insertItemLang(Guid idItem,Guid idLang, string nameItem, string information, string audio, string video)
+        {
+            bool kt = false;
+            try
+            {
+                Item_Lang itemLang = new Item_Lang();
+                itemLang.IdItem = idItem;
+                itemLang.IdLanguage = idLang;
+                itemLang.ItemName = nameItem;
+                itemLang.Information = information;
+                itemLang.Audio = audio;
+                itemLang.Video = video;
+                db.Item_Langs.InsertOnSubmit(itemLang);
+                db.SubmitChanges();
+                kt = true;
+            }
+            catch (Exception ex)
+            {
+                kt = false;
+            }
+            return kt;
+        }
         //Update Item_Lang
+        [WebMethod(Description = "Sua ITEM_LANG")]
+        public bool updateItemLang(Guid idItem, Guid idLang, string nameItem, string information, string audio, string video)
+        {
+            bool kt = false;
+            try
+            {
+                var truyvan = from itl in db.Item_Langs
+                              where itl.IdItem == idItem && itl.IdLanguage == idLang
+                              select itl;
+                foreach (Item_Lang il in truyvan)
+                {
+                    il.ItemName = nameItem;
+                    il.Information = information;
+                    il.Audio = audio;
+                    il.Video = video;
+                }
+                db.SubmitChanges();
+                kt = true;
+            }
+            catch (Exception ex)
+            {
+                kt = false;
+            }
+            return kt;
+        }
         //Delete Item_Lang
-        
+        [WebMethod(Description = "Xoa ITEM_LANG")]
+        public bool deleteItemLang(Guid idItem, Guid idLang)
+        {
+            bool kt = false;
+            try
+            {
+                var truyvan = from itl in db.Item_Langs
+                              where itl.IdItem == idItem && itl.IdLanguage == idLang
+                              select itl;
+                foreach (Item_Lang il in truyvan)
+                {
+                    db.Item_Langs.DeleteOnSubmit(il);
+                }
+                db.SubmitChanges();
+                kt = true;
+            }
+            catch (Exception ex)
+            {
+                kt = false;
+            }
+            return kt;
+        }
         #endregion
-
+        
     }
 }

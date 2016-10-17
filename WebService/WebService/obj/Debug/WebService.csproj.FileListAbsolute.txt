@@ -4,3 +4,8 @@ C:\Users\Administrator\Desktop\AppDuLichHue\WebService\WebService\obj\Debug\WebS
 C:\Users\Administrator\Desktop\AppDuLichHue\WebService\WebService\obj\Debug\WebService.dll
 C:\Users\Administrator\Desktop\AppDuLichHue\WebService\WebService\obj\Debug\WebService.pdb
 C:\Users\Administrator\Desktop\AppDuLichHue\WebService\WebService\bin\mysql.data.dll
+C:\Users\Administrator\Desktop\AppDuLichHue\DuLichHue\WebService\WebService\bin\WebService.dll
+C:\Users\Administrator\Desktop\AppDuLichHue\DuLichHue\WebService\WebService\bin\WebService.pdb
+C:\Users\Administrator\Desktop\AppDuLichHue\DuLichHue\WebService\WebService\obj\Debug\WebService.csprojResolveAssemblyReference.cache
+C:\Users\Administrator\Desktop\AppDuLichHue\DuLichHue\WebService\WebService\obj\Debug\WebService.dll
+C:\Users\Administrator\Desktop\AppDuLichHue\DuLichHue\WebService\WebService\obj\Debug\WebService.pdb

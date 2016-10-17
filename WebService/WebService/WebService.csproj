@@ -60,6 +60,7 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Citem.cs" />
     <Compile Include="QuanLyDuLich.designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>

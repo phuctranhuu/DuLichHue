@@ -6,7 +6,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
-
+using HeThongQuanLyDuLich.ServiceFull;
 namespace HeThongQuanLyDuLich.GUI
 {
     public partial class frmDangNhap : Form
