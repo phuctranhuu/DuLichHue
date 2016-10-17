@@ -613,5 +613,283 @@ namespace WebService
             return kt;
         }
         #endregion 
+    
+        #region Table Location va Location_Lang
+        //Thêm Location. Nếu thêm thành công thì sẽ trả về true, ngược lại trả về false
+        //insert Location
+        [WebMethod(Description = "Them Moi Location")]
+        public bool insertLocation(Guid idStore)
+        {
+            bool kt = false;
+            try
+            {
+                Location location = new Location();
+                location.IdLocation = Guid.NewGuid();
+                location.IdStore = idStore;
+                db.Locations.InsertOnSubmit(location);
+                db.SubmitChanges();
+                kt = true;
+            }
+            catch (Exception ex)
+            {
+                kt = false;
+            }
+            return kt;
+        }
+
+        //update Location
+        [WebMethod(Description = "Sua Location")]
+        public bool updateLocation(Guid idLocation, Guid idStore)
+        {
+            bool kt = false;
+            try
+            {
+                var truyvan = from lc in db.Locations
+                              where lc.IdLocation == idLocation
+                              select lc;
+                foreach (Location l in truyvan)
+                {
+                    l.IdStore = idStore;
+                }
+                db.SubmitChanges();
+                kt = true;
+            }
+            catch (Exception ex)
+            {
+                kt = false;
+            }
+            return kt;
+        }
+
+        //Xóa Location
+        [WebMethod(Description = "Xoa Location")]
+        public bool deleteLocation(Guid idLocation)
+        {
+            bool kt = false;
+            try
+            {
+                var truyvan = from lc in db.Locations
+                              where lc.IdLocation == idLocation
+                              select lc;
+                foreach (Location l in truyvan)
+                {
+                    db.Locations.DeleteOnSubmit(l);
+                }
+                db.SubmitChanges();
+                kt = true;
+            }
+            catch (Exception ex)
+            {
+                kt = false;
+            }
+            return kt;
+        }
+
+        //insert Location_Lang
+        [WebMethod(Description = "Them Moi Location_Lang")]
+        public bool insertLocationLang(Guid idLocation, Guid idLang, string nameLocation)
+        {
+            bool kt = false;
+            try
+            {
+                Location_Lang locationLang = new Location_Lang();
+                locationLang.IdLocation = idLocation;
+                locationLang.IdLanguage = idLang;
+                locationLang.LocationName = nameLocation;
+                db.Location_Langs.InsertOnSubmit(locationLang);
+                db.SubmitChanges();
+                kt = true;
+            }
+            catch (Exception ex)
+            {
+                kt = false;
+            }
+            return kt;
+        }
+
+        //delete Location_Lang
+        [WebMethod(Description = "Xoa Location_Lang")]
+        public bool deleteLocationLang(Guid idLocation, Guid idLang)
+        {
+            bool kt = false;
+            try
+            {
+                var truyvan = from ll in db.Location_Langs
+                              where ll.IdLanguage == idLang && ll.IdLocation == idLocation
+                              select ll;
+                foreach (Location_Lang lc in truyvan)
+                {
+                    db.Location_Langs.DeleteOnSubmit(lc);
+                }
+                db.SubmitChanges();
+                kt = true;
+            }
+            catch (Exception ex)
+            {
+                kt = false;
+            }
+            return kt;
+        }
+
+        //update Location_Lang
+        [WebMethod(Description = "Sua Location_Lang")]
+        public bool updateLocationLang(Guid idLocation, Guid idLang, string nameLocation)
+        {
+            bool kt = false;
+            try
+            {
+                var truyvan = from ll in db.Location_Langs
+                              where ll.IdLanguage == idLang && ll.IdLocation == idLocation
+                              select ll;
+                foreach (Location_Lang lc in truyvan)
+                {
+                    lc.LocationName = nameLocation;
+                }
+                db.SubmitChanges();
+                kt = true;
+            }
+            catch (Exception ex)
+            {
+                kt = false;
+            }
+            return kt;
+        }
+        #endregion 
+    
+        #region Table Category va Category_Lang
+        //Thêm Category. Nếu thêm thành công thì sẽ trả về true, ngược lại trả về false
+        //insert Category
+        [WebMethod(Description = "Them Moi Category")]
+        public bool insertCategory()
+        {
+            bool kt = false;
+            try
+            {
+                Category category = new Category();
+                category.IdCategory = Guid.NewGuid();
+                db.Categories.InsertOnSubmit(category);
+                db.SubmitChanges();
+                kt = true;
+            }
+            catch (Exception ex)
+            {
+                kt = false;
+            }
+            return kt;
+        }
+
+        //Xóa Category
+        [WebMethod(Description = "Xoa Category")]
+        public bool deleteCategory(Guid idCategory)
+        {
+            bool kt = false;
+            try
+            {
+                var truyvan = from ct in db.Categories
+                              where ct.IdCategory == idCategory
+                              select ct;
+                foreach (Category c in truyvan)
+                {
+                    db.Categories.DeleteOnSubmit(c);
+                }
+                db.SubmitChanges();
+                kt = true;
+            }
+            catch (Exception ex)
+            {
+                kt = false;
+            }
+            return kt;
+        }
+
+
+        //insert Category_Lang
+        [WebMethod(Description = "Them Moi Category_Lang")]
+        public bool insertCategoryLang(Guid idCategory, Guid idLang, string nameCategory)
+        {
+            bool kt = false;
+            try
+            {
+                Category_Lang categoryLang = new Category_Lang();
+                categoryLang.IdCategory = idCategory;
+                categoryLang.IdLanguage = idLang;
+                categoryLang.CategoryName = nameCategory;
+                db.Category_Langs.InsertOnSubmit(categoryLang);
+                db.SubmitChanges();
+                kt = true;
+            }
+            catch (Exception ex)
+            {
+                kt = false;
+            }
+            return kt;
+        }
+
+        //delete Category_Lang
+        [WebMethod(Description = "Xoa Category_Lang")]
+        public bool deleteCategoryLang(Guid idCategory, Guid idLang)
+        {
+            bool kt = false;
+            try
+            {
+                var truyvan = from ctl in db.Category_Langs
+                              where ctl.IdLanguage == idLang && ctl.IdCategory == idCategory
+                              select ctl;
+                foreach (Category_Lang ct in truyvan)
+                {
+                    db.Category_Langs.DeleteOnSubmit(ct);
+                }
+                db.SubmitChanges();
+                kt = true;
+            }
+            catch (Exception ex)
+            {
+                kt = false;
+            }
+            return kt;
+        }
+
+        //update Category_Lang
+        [WebMethod(Description = "Sua Category_Lang")]
+        public bool updateCategoryLang(Guid idCategory, Guid idLang, string nameCategory)
+        {
+            bool kt = false;
+            try
+            {
+                var truyvan = from ctl in db.Category_Langs
+                              where ctl.IdLanguage == idLang && ctl.IdCategory == idCategory
+                              select ctl;
+                foreach (Category_Lang ct in truyvan)
+                {
+                    ct.CategoryName = nameCategory;
+                }
+                db.SubmitChanges();
+                kt = true;
+            }
+            catch (Exception ex)
+            {
+                kt = false;
+            }
+            return kt;
+        }
+        #endregion
+
+        #region Table Item, Item_Lang va Item_Category
+        /*--- ITEM_CATEGORY ---*/
+        //Insert Item_Category
+        //Delete Item_Category
+
+        /*--- ITEM ---*/
+        //Insert Item
+        //Update Item
+        //Delete Item
+
+        /*--- ITEM_LANG ---*/
+        //Insert Item_Lang
+        //Update Item_Lang
+        //Delete Item_Lang
+        
+        #endregion
+
     }
 }

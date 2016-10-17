@@ -8,3 +8,6 @@ C:\Users\Administrator\Desktop\AppDuLichHue\HeThongQuanLyDuLich\HeThongQuanLyDuL
 C:\Users\Administrator\Desktop\AppDuLichHue\HeThongQuanLyDuLich\HeThongQuanLyDuLich\obj\Debug\HeThongQuanLyDuLich.pdb
 C:\Users\Administrator\Desktop\AppDuLichHue\HeThongQuanLyDuLich\HeThongQuanLyDuLich\obj\Debug\HeThongQuanLyDuLich.Form1.resources
 C:\Users\Administrator\Desktop\AppDuLichHue\HeThongQuanLyDuLich\HeThongQuanLyDuLich\obj\Debug\HeThongQuanLyDuLich.GUI.frmDangNhap.resources
+C:\Users\Administrator\Desktop\AppDuLichHue\DuLichHue\HeThongQuanLyDuLich\HeThongQuanLyDuLich\bin\Debug\HeThongQuanLyDuLich.exe.config
+C:\Users\Administrator\Desktop\AppDuLichHue\DuLichHue\HeThongQuanLyDuLich\HeThongQuanLyDuLich\obj\Debug\HeThongQuanLyDuLich.exe
+C:\Users\Administrator\Desktop\AppDuLichHue\DuLichHue\HeThongQuanLyDuLich\HeThongQuanLyDuLich\obj\Debug\HeThongQuanLyDuLich.pdb
