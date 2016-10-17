@@ -1,0 +1,10 @@
+C:\Users\Administrator\Desktop\AppDuLichHue\HeThongQuanLyDuLich\HeThongQuanLyDuLich\bin\Debug\HeThongQuanLyDuLich.exe.config
+C:\Users\Administrator\Desktop\AppDuLichHue\HeThongQuanLyDuLich\HeThongQuanLyDuLich\bin\Debug\HeThongQuanLyDuLich.exe
+C:\Users\Administrator\Desktop\AppDuLichHue\HeThongQuanLyDuLich\HeThongQuanLyDuLich\bin\Debug\HeThongQuanLyDuLich.pdb
+C:\Users\Administrator\Desktop\AppDuLichHue\HeThongQuanLyDuLich\HeThongQuanLyDuLich\obj\Debug\HeThongQuanLyDuLich.csprojResolveAssemblyReference.cache
+C:\Users\Administrator\Desktop\AppDuLichHue\HeThongQuanLyDuLich\HeThongQuanLyDuLich\obj\Debug\HeThongQuanLyDuLich.Properties.Resources.resources
+C:\Users\Administrator\Desktop\AppDuLichHue\HeThongQuanLyDuLich\HeThongQuanLyDuLich\obj\Debug\HeThongQuanLyDuLich.csproj.GenerateResource.Cache
+C:\Users\Administrator\Desktop\AppDuLichHue\HeThongQuanLyDuLich\HeThongQuanLyDuLich\obj\Debug\HeThongQuanLyDuLich.exe
+C:\Users\Administrator\Desktop\AppDuLichHue\HeThongQuanLyDuLich\HeThongQuanLyDuLich\obj\Debug\HeThongQuanLyDuLich.pdb
+C:\Users\Administrator\Desktop\AppDuLichHue\HeThongQuanLyDuLich\HeThongQuanLyDuLich\obj\Debug\HeThongQuanLyDuLich.Form1.resources
+C:\Users\Administrator\Desktop\AppDuLichHue\HeThongQuanLyDuLich\HeThongQuanLyDuLich\obj\Debug\HeThongQuanLyDuLich.GUI.frmDangNhap.resources

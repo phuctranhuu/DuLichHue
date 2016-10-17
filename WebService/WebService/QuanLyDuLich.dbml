@@ -1,0 +1,143 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="QuanLyDuLichHue" Class="QuanLyDuLichDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="WebSettings" ConnectionString="Data Source=PHUCHUU\SQLEXPRESS;Initial Catalog=QuanLyDuLichHue;Integrated Security=True" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="QuanLyDuLichHueConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.Account" Member="Accounts">
+    <Type Name="Account">
+      <Column Name="IdAccount" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="FullName" Type="System.String" DbType="NVarChar(80)" CanBeNull="true" />
+      <Column Name="Username" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Password" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Role" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Store_Lang" Member="Store_Langs">
+    <Type Name="Store_Lang">
+      <Column Name="IdStore" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="IdLanguage" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="StoreName" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Association Name="Language_Store_Lang" Member="Language" ThisKey="IdLanguage" OtherKey="IdLanguage" Type="Language" IsForeignKey="true" />
+      <Association Name="Store_Store_Lang" Member="Store" ThisKey="IdStore" OtherKey="IdStore" Type="Store" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Category" Member="Categories">
+    <Type Name="Category">
+      <Column Name="IdCategory" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Association Name="Category_Category_Lang" Member="Category_Langs" AccessModifier="Internal" ThisKey="IdCategory" OtherKey="IdCategory" Type="Category_Lang" />
+      <Association Name="Category_Item_Category" Member="Item_Categories" AccessModifier="Internal" ThisKey="IdCategory" OtherKey="IdCategory" Type="Item_Category" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Category_Lang" Member="Category_Langs">
+    <Type Name="Category_Lang">
+      <Column Name="IdCategory" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="IdLanguage" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="CategoryName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Association Name="Category_Category_Lang" Member="Category" ThisKey="IdCategory" OtherKey="IdCategory" Type="Category" IsForeignKey="true" />
+      <Association Name="Language_Category_Lang" Member="Language" ThisKey="IdLanguage" OtherKey="IdLanguage" Type="Language" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.City" Member="Cities">
+    <Type Name="City">
+      <Column Name="IdCity" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Association Name="City_City_Lang" Member="City_Langs" AccessModifier="Internal" ThisKey="IdCity" OtherKey="IdCity" Type="City_Lang" />
+      <Association Name="City_Place" Member="Places" AccessModifier="Internal" ThisKey="IdCity" OtherKey="IdCity" Type="Place" />
+    </Type>
+  </Table>
+  <Table Name="dbo.City_Lang" Member="City_Langs">
+    <Type Name="City_Lang">
+      <Column Name="IdCity" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="IdLanguage" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="CityName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Association Name="City_City_Lang" Member="City" ThisKey="IdCity" OtherKey="IdCity" Type="City" IsForeignKey="true" />
+      <Association Name="Language_City_Lang" Member="Language" ThisKey="IdLanguage" OtherKey="IdLanguage" Type="Language" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Item" Member="Items">
+    <Type Name="Item">
+      <Column Name="IdItem" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="ImageItem" Type="System.Data.Linq.Binary" DbType="Image" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="IdLocation" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Association Name="Item_Item_Category" Member="Item_Categories" AccessModifier="Internal" ThisKey="IdItem" OtherKey="IdItem" Type="Item_Category" />
+      <Association Name="Item_Item_Lang" Member="Item_Langs" AccessModifier="Internal" ThisKey="IdItem" OtherKey="IdItem" Type="Item_Lang" />
+      <Association Name="Location_Item" Member="Location" ThisKey="IdLocation" OtherKey="IdLocation" Type="Location" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Item_Category" Member="Item_Categories">
+    <Type Name="Item_Category">
+      <Column Name="IdItem" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="IdCategory" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Association Name="Category_Item_Category" Member="Category" ThisKey="IdCategory" OtherKey="IdCategory" Type="Category" IsForeignKey="true" />
+      <Association Name="Item_Item_Category" Member="Item" ThisKey="IdItem" OtherKey="IdItem" Type="Item" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Item_Lang" Member="Item_Langs">
+    <Type Name="Item_Lang">
+      <Column Name="IdItem" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="IdLanguage" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="ItemName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Information" Type="System.String" DbType="NText" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="Audio" Type="System.String" DbType="Char(300)" CanBeNull="true" />
+      <Column Name="Video" Type="System.String" DbType="Char(300)" CanBeNull="true" />
+      <Association Name="Item_Item_Lang" Member="Item" ThisKey="IdItem" OtherKey="IdItem" Type="Item" IsForeignKey="true" />
+      <Association Name="Language_Item_Lang" Member="Language" ThisKey="IdLanguage" OtherKey="IdLanguage" Type="Language" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Language" Member="Languages">
+    <Type Name="Language">
+      <Column Name="IdLanguage" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="LanguageName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Association Name="Language_Store_Lang" Member="Store_Langs" AccessModifier="Internal" ThisKey="IdLanguage" OtherKey="IdLanguage" Type="Store_Lang" />
+      <Association Name="Language_Category_Lang" Member="Category_Langs" AccessModifier="Internal" ThisKey="IdLanguage" OtherKey="IdLanguage" Type="Category_Lang" />
+      <Association Name="Language_City_Lang" Member="City_Langs" AccessModifier="Internal" ThisKey="IdLanguage" OtherKey="IdLanguage" Type="City_Lang" />
+      <Association Name="Language_Item_Lang" Member="Item_Langs" AccessModifier="Internal" ThisKey="IdLanguage" OtherKey="IdLanguage" Type="Item_Lang" />
+      <Association Name="Language_Location_Lang" Member="Location_Langs" AccessModifier="Internal" ThisKey="IdLanguage" OtherKey="IdLanguage" Type="Location_Lang" />
+      <Association Name="Language_Place_Lang" Member="Place_Langs" AccessModifier="Internal" ThisKey="IdLanguage" OtherKey="IdLanguage" Type="Place_Lang" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Location" Member="Locations">
+    <Type Name="Location">
+      <Column Name="IdLocation" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="IdStore" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Association Name="Location_Item" Member="Items" AccessModifier="Internal" ThisKey="IdLocation" OtherKey="IdLocation" Type="Item" />
+      <Association Name="Location_Location_Lang" Member="Location_Langs" AccessModifier="Internal" ThisKey="IdLocation" OtherKey="IdLocation" Type="Location_Lang" />
+      <Association Name="Store_Location" Member="Store" ThisKey="IdStore" OtherKey="IdStore" Type="Store" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Location_Lang" Member="Location_Langs">
+    <Type Name="Location_Lang">
+      <Column Name="IdLocation" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="IdLanguage" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="LocationName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Association Name="Language_Location_Lang" Member="Language" ThisKey="IdLanguage" OtherKey="IdLanguage" Type="Language" IsForeignKey="true" />
+      <Association Name="Location_Location_Lang" Member="Location" ThisKey="IdLocation" OtherKey="IdLocation" Type="Location" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Place" Member="Places">
+    <Type Name="Place">
+      <Column Name="IdPlace" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="ImagePlace" Type="System.Data.Linq.Binary" DbType="Image" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="IdCity" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Association Name="Place_Place_Lang" Member="Place_Langs" AccessModifier="Internal" ThisKey="IdPlace" OtherKey="IdPlace" Type="Place_Lang" />
+      <Association Name="Place_Store" Member="Stores" AccessModifier="Internal" ThisKey="IdPlace" OtherKey="IdPlace" Type="Store" />
+      <Association Name="City_Place" Member="City" ThisKey="IdCity" OtherKey="IdCity" Type="City" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Place_Lang" Member="Place_Langs">
+    <Type Name="Place_Lang">
+      <Column Name="IdPlace" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="IdLanguage" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="PlaceName" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="Address" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="Information" Type="System.String" DbType="NText" CanBeNull="true" UpdateCheck="Never" />
+      <Association Name="Language_Place_Lang" Member="Language" ThisKey="IdLanguage" OtherKey="IdLanguage" Type="Language" IsForeignKey="true" />
+      <Association Name="Place_Place_Lang" Member="Place" ThisKey="IdPlace" OtherKey="IdPlace" Type="Place" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Store" Member="Stores">
+    <Type Name="Store">
+      <Column Name="IdStore" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="IdPlace" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Association Name="Store_Store_Lang" Member="Store_Langs" AccessModifier="Internal" ThisKey="IdStore" OtherKey="IdStore" Type="Store_Lang" />
+      <Association Name="Store_Location" Member="Locations" AccessModifier="Internal" ThisKey="IdStore" OtherKey="IdStore" Type="Location" />
+      <Association Name="Place_Store" Member="Place" ThisKey="IdPlace" OtherKey="IdPlace" Type="Place" IsForeignKey="true" />
+    </Type>
+  </Table>
+</Database>

@@ -1,0 +1,655 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:s1="http://microsoft.com/wsdl/types/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:import namespace="http://microsoft.com/wsdl/types/" />
+      <s:element name="checkLogin">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="userName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="passWord" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="checkLoginResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="checkLoginResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getAccount">
+        <s:complexType />
+      </s:element>
+      <s:element name="getAccountResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getAccountResult" type="tns:ArrayOfAccount" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfAccount">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="Account" nillable="true" type="tns:Account" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="Account">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="IdAccount" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="FullName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Username" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Password" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="Role" nillable="true" type="s:int" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="insertAccount">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="name" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="username" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="role" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="insertAccountResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="insertAccountResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="updateAccount">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="id" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="name" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="username" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="role" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="updateAccountResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="updateAccountResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="deleteAccount">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="id" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="deleteAccountResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="deleteAccountResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getLanguage">
+        <s:complexType />
+      </s:element>
+      <s:element name="getLanguageResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getLanguageResult" type="tns:ArrayOfLanguage" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfLanguage">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="Language" nillable="true" type="tns:Language" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="Language">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="IdLanguage" type="s1:guid" />
+          <s:element minOccurs="0" maxOccurs="1" name="LanguageName" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="insertLanguage">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="langName" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="insertLanguageResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="insertLanguageResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="updateLanguage">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="id" type="s1:guid" />
+            <s:element minOccurs="0" maxOccurs="1" name="langName" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="updateLanguageResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="updateLanguageResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="deleteLanguage">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="id" type="s1:guid" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="deleteLanguageResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="deleteLanguageResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="insertCity">
+        <s:complexType />
+      </s:element>
+      <s:element name="insertCityResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="insertCityResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="deleteCity">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="id" type="s1:guid" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="deleteCityResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="deleteCityResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="insertCityLang">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="idCity" type="s1:guid" />
+            <s:element minOccurs="1" maxOccurs="1" name="idLang" type="s1:guid" />
+            <s:element minOccurs="0" maxOccurs="1" name="nameCity" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="insertCityLangResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="insertCityLangResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="deleteCityLang">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="idCity" type="s1:guid" />
+            <s:element minOccurs="1" maxOccurs="1" name="idLang" type="s1:guid" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="deleteCityLangResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="deleteCityLangResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="updateCityLang">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="idCity" type="s1:guid" />
+            <s:element minOccurs="1" maxOccurs="1" name="idLang" type="s1:guid" />
+            <s:element minOccurs="0" maxOccurs="1" name="nameCity" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="updateCityLangResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="updateCityLangResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://microsoft.com/wsdl/types/">
+      <s:simpleType name="guid">
+        <s:restriction base="s:string">
+          <s:pattern value="[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}" />
+        </s:restriction>
+      </s:simpleType>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="checkLoginSoapIn">
+    <wsdl:part name="parameters" element="tns:checkLogin" />
+  </wsdl:message>
+  <wsdl:message name="checkLoginSoapOut">
+    <wsdl:part name="parameters" element="tns:checkLoginResponse" />
+  </wsdl:message>
+  <wsdl:message name="getAccountSoapIn">
+    <wsdl:part name="parameters" element="tns:getAccount" />
+  </wsdl:message>
+  <wsdl:message name="getAccountSoapOut">
+    <wsdl:part name="parameters" element="tns:getAccountResponse" />
+  </wsdl:message>
+  <wsdl:message name="insertAccountSoapIn">
+    <wsdl:part name="parameters" element="tns:insertAccount" />
+  </wsdl:message>
+  <wsdl:message name="insertAccountSoapOut">
+    <wsdl:part name="parameters" element="tns:insertAccountResponse" />
+  </wsdl:message>
+  <wsdl:message name="updateAccountSoapIn">
+    <wsdl:part name="parameters" element="tns:updateAccount" />
+  </wsdl:message>
+  <wsdl:message name="updateAccountSoapOut">
+    <wsdl:part name="parameters" element="tns:updateAccountResponse" />
+  </wsdl:message>
+  <wsdl:message name="deleteAccountSoapIn">
+    <wsdl:part name="parameters" element="tns:deleteAccount" />
+  </wsdl:message>
+  <wsdl:message name="deleteAccountSoapOut">
+    <wsdl:part name="parameters" element="tns:deleteAccountResponse" />
+  </wsdl:message>
+  <wsdl:message name="getLanguageSoapIn">
+    <wsdl:part name="parameters" element="tns:getLanguage" />
+  </wsdl:message>
+  <wsdl:message name="getLanguageSoapOut">
+    <wsdl:part name="parameters" element="tns:getLanguageResponse" />
+  </wsdl:message>
+  <wsdl:message name="insertLanguageSoapIn">
+    <wsdl:part name="parameters" element="tns:insertLanguage" />
+  </wsdl:message>
+  <wsdl:message name="insertLanguageSoapOut">
+    <wsdl:part name="parameters" element="tns:insertLanguageResponse" />
+  </wsdl:message>
+  <wsdl:message name="updateLanguageSoapIn">
+    <wsdl:part name="parameters" element="tns:updateLanguage" />
+  </wsdl:message>
+  <wsdl:message name="updateLanguageSoapOut">
+    <wsdl:part name="parameters" element="tns:updateLanguageResponse" />
+  </wsdl:message>
+  <wsdl:message name="deleteLanguageSoapIn">
+    <wsdl:part name="parameters" element="tns:deleteLanguage" />
+  </wsdl:message>
+  <wsdl:message name="deleteLanguageSoapOut">
+    <wsdl:part name="parameters" element="tns:deleteLanguageResponse" />
+  </wsdl:message>
+  <wsdl:message name="insertCitySoapIn">
+    <wsdl:part name="parameters" element="tns:insertCity" />
+  </wsdl:message>
+  <wsdl:message name="insertCitySoapOut">
+    <wsdl:part name="parameters" element="tns:insertCityResponse" />
+  </wsdl:message>
+  <wsdl:message name="deleteCitySoapIn">
+    <wsdl:part name="parameters" element="tns:deleteCity" />
+  </wsdl:message>
+  <wsdl:message name="deleteCitySoapOut">
+    <wsdl:part name="parameters" element="tns:deleteCityResponse" />
+  </wsdl:message>
+  <wsdl:message name="insertCityLangSoapIn">
+    <wsdl:part name="parameters" element="tns:insertCityLang" />
+  </wsdl:message>
+  <wsdl:message name="insertCityLangSoapOut">
+    <wsdl:part name="parameters" element="tns:insertCityLangResponse" />
+  </wsdl:message>
+  <wsdl:message name="deleteCityLangSoapIn">
+    <wsdl:part name="parameters" element="tns:deleteCityLang" />
+  </wsdl:message>
+  <wsdl:message name="deleteCityLangSoapOut">
+    <wsdl:part name="parameters" element="tns:deleteCityLangResponse" />
+  </wsdl:message>
+  <wsdl:message name="updateCityLangSoapIn">
+    <wsdl:part name="parameters" element="tns:updateCityLang" />
+  </wsdl:message>
+  <wsdl:message name="updateCityLangSoapOut">
+    <wsdl:part name="parameters" element="tns:updateCityLangResponse" />
+  </wsdl:message>
+  <wsdl:portType name="Service1Soap">
+    <wsdl:operation name="checkLogin">
+      <wsdl:input message="tns:checkLoginSoapIn" />
+      <wsdl:output message="tns:checkLoginSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getAccount">
+      <wsdl:input message="tns:getAccountSoapIn" />
+      <wsdl:output message="tns:getAccountSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="insertAccount">
+      <wsdl:input message="tns:insertAccountSoapIn" />
+      <wsdl:output message="tns:insertAccountSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="updateAccount">
+      <wsdl:input message="tns:updateAccountSoapIn" />
+      <wsdl:output message="tns:updateAccountSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="deleteAccount">
+      <wsdl:input message="tns:deleteAccountSoapIn" />
+      <wsdl:output message="tns:deleteAccountSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getLanguage">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Lay ra danh sach Language</wsdl:documentation>
+      <wsdl:input message="tns:getLanguageSoapIn" />
+      <wsdl:output message="tns:getLanguageSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="insertLanguage">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Them Moi Language</wsdl:documentation>
+      <wsdl:input message="tns:insertLanguageSoapIn" />
+      <wsdl:output message="tns:insertLanguageSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="updateLanguage">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Sua Language</wsdl:documentation>
+      <wsdl:input message="tns:updateLanguageSoapIn" />
+      <wsdl:output message="tns:updateLanguageSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="deleteLanguage">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Xoa Language</wsdl:documentation>
+      <wsdl:input message="tns:deleteLanguageSoapIn" />
+      <wsdl:output message="tns:deleteLanguageSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="insertCity">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Them Moi City</wsdl:documentation>
+      <wsdl:input message="tns:insertCitySoapIn" />
+      <wsdl:output message="tns:insertCitySoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="deleteCity">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Xoa City</wsdl:documentation>
+      <wsdl:input message="tns:deleteCitySoapIn" />
+      <wsdl:output message="tns:deleteCitySoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="insertCityLang">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Them Moi City_Lang</wsdl:documentation>
+      <wsdl:input message="tns:insertCityLangSoapIn" />
+      <wsdl:output message="tns:insertCityLangSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="deleteCityLang">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Xoa City_Lang</wsdl:documentation>
+      <wsdl:input message="tns:deleteCityLangSoapIn" />
+      <wsdl:output message="tns:deleteCityLangSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="updateCityLang">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Sua City_Lang</wsdl:documentation>
+      <wsdl:input message="tns:updateCityLangSoapIn" />
+      <wsdl:output message="tns:updateCityLangSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="Service1Soap" type="tns:Service1Soap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="checkLogin">
+      <soap:operation soapAction="http://tempuri.org/checkLogin" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getAccount">
+      <soap:operation soapAction="http://tempuri.org/getAccount" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="insertAccount">
+      <soap:operation soapAction="http://tempuri.org/insertAccount" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="updateAccount">
+      <soap:operation soapAction="http://tempuri.org/updateAccount" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="deleteAccount">
+      <soap:operation soapAction="http://tempuri.org/deleteAccount" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getLanguage">
+      <soap:operation soapAction="http://tempuri.org/getLanguage" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="insertLanguage">
+      <soap:operation soapAction="http://tempuri.org/insertLanguage" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="updateLanguage">
+      <soap:operation soapAction="http://tempuri.org/updateLanguage" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="deleteLanguage">
+      <soap:operation soapAction="http://tempuri.org/deleteLanguage" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="insertCity">
+      <soap:operation soapAction="http://tempuri.org/insertCity" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="deleteCity">
+      <soap:operation soapAction="http://tempuri.org/deleteCity" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="insertCityLang">
+      <soap:operation soapAction="http://tempuri.org/insertCityLang" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="deleteCityLang">
+      <soap:operation soapAction="http://tempuri.org/deleteCityLang" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="updateCityLang">
+      <soap:operation soapAction="http://tempuri.org/updateCityLang" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="Service1Soap12" type="tns:Service1Soap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="checkLogin">
+      <soap12:operation soapAction="http://tempuri.org/checkLogin" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getAccount">
+      <soap12:operation soapAction="http://tempuri.org/getAccount" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="insertAccount">
+      <soap12:operation soapAction="http://tempuri.org/insertAccount" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="updateAccount">
+      <soap12:operation soapAction="http://tempuri.org/updateAccount" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="deleteAccount">
+      <soap12:operation soapAction="http://tempuri.org/deleteAccount" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getLanguage">
+      <soap12:operation soapAction="http://tempuri.org/getLanguage" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="insertLanguage">
+      <soap12:operation soapAction="http://tempuri.org/insertLanguage" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="updateLanguage">
+      <soap12:operation soapAction="http://tempuri.org/updateLanguage" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="deleteLanguage">
+      <soap12:operation soapAction="http://tempuri.org/deleteLanguage" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="insertCity">
+      <soap12:operation soapAction="http://tempuri.org/insertCity" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="deleteCity">
+      <soap12:operation soapAction="http://tempuri.org/deleteCity" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="insertCityLang">
+      <soap12:operation soapAction="http://tempuri.org/insertCityLang" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="deleteCityLang">
+      <soap12:operation soapAction="http://tempuri.org/deleteCityLang" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="updateCityLang">
+      <soap12:operation soapAction="http://tempuri.org/updateCityLang" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Service1">
+    <wsdl:port name="Service1Soap" binding="tns:Service1Soap">
+      <soap:address location="http://localhost:56019/Service1.asmx" />
+    </wsdl:port>
+    <wsdl:port name="Service1Soap12" binding="tns:Service1Soap12">
+      <soap12:address location="http://localhost:56019/Service1.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
